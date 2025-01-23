@@ -1,16 +1,53 @@
 import { features } from "../constants";
+import {motion } from "framer-motion";
+
+const textVariants = {
+    hidden: { opacity: 0, y: 50},
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut"}}
+}
+
+const containerVariants = {
+    hidden: { opacity: 1},
+    visible: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.3,
+        }
+    }
+}
+
+const imageVariants = {
+    hidden: { clickPath: "inset(0 50% 0 50%"},
+    visible: {
+        clickPath: "inset(0 0% 0 0%",
+        transition: { duration: 1.2, ease: "easeInOut"}
+    }
+}
+
+
+
 function FeatureSection() {
   return (
     <div className="relative mt-20 border-b border-neutral-800 min-h-[800px] ">
         <div className="text-center">
-            <span className="bg-neutral-900 text-orange-500 rounded-full h-6
+            <motion.span
+               initial={{ opacity: 0, y: 20 }}
+               whileInView={{ opacity: 1, y: 0 }} 
+               transition={{ duration: 1, ease: "easeOut" }} 
+               viewport={{ once: false, amount: 0.5 }} 
+            
+            className="bg-neutral-900 text-orange-500 rounded-full h-6
             text-sm font-medium px-2 py-1 uppercase">
                 feature
-            </span>
-            <h2 className="text-3xl sm:tex-5xl lg:text-6xl mt-10 lg:mt-20 tracking wide "> 
+            </motion.span>
+            <motion.h2
+             whileInView={{ opacity: 1, x: 0 }}
+             initial={{ opacity: 0 , x: -100}}
+             transition={{ duration: 1}}
+            className="text-3xl sm:tex-5xl lg:text-6xl mt-10 lg:mt-20 tracking wide "> 
                 Easily build 
               <span className="bg-gradient-to-r from-orange-500 to-orange-800 text-transparent bg-clip-text"> {" "}your code </span>
-            </h2>
+            </motion.h2>
         </div>
         <div className="flex flex-wrap mt-10 lg:mt-20">
             {features.map((feature, index) => (

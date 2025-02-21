@@ -21,7 +21,10 @@ const Home = () => {
   const prevSlide = () => setCurrent((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
   const nextSlide = () => setCurrent((prev) => (prev === slides.length - 1 ? 0 : prev + 1));  
 
+  
   const videoRef = useRef(null);
+   
+   
 
 
 
@@ -108,26 +111,49 @@ const Home = () => {
           <div className="px-4 lg:px-12 max-w-screen-2xl mx-auto pt-60">
                <div className="md:w-11/12 mx-auto flex flex-col md:flex-row justify-between items-center gap-24">
                   <div>
+                    
                   <motion.video
-            ref={(it) => {
-                if (it) {
-                    it.volume = 0.13;
-                    videoRef.current = it;
-                }
-            }}
-            autoPlay
-            controls
-            controlsList="nodownload"
-            onContextMenu={(b) => b.preventDefault()}
-            className="rounded-2xl border border-green-400 shadow-2xl shadow-green-500"
-            whileInView={{ opacity: 1 }}
-            initial={{ opacity: 0 }}
-            onViewportEnter={() => videoRef.current?.play()}
-            onViewportLeave={() => videoRef.current?.pause()}
-        >
-            <source src={videoPortada} type="video/mp4" />
-            Your browser does not support the video tag.
-        </motion.video>
+                      ref={(it) => {
+                          if (it) {
+                              it.volume = 0.13; //  se configura el  volumen
+                              videoRef.current = it;
+                              videoRef.current.dataset.pausedByUser = "false"; // Inicializar
+                          }
+                      }}
+                      controls
+                      controlsList="nodownload"
+                      onContextMenu={(e) => e.preventDefault()}
+                      className="rounded-2xl border border-green-400 shadow-2xl shadow-green-500"
+                      whileInView={{ opacity: 1 }}
+                      initial={{ opacity: 0 }}
+                      onViewportEnter={() => {
+                          if (videoRef.current?.dataset.pausedByUser === "true") return;  
+                          videoRef.current?.play(); 
+                      }}
+                      onViewportLeave={() => {
+                          if (videoRef.current && !videoRef.current.paused) {
+                              videoRef.current.dataset.autoPaused = "true"; 
+                              videoRef.current.pause();
+                          }
+                      }}
+                      onPause={() => {
+                          if (videoRef.current && videoRef.current.dataset.autoPaused !== "true") {
+                              videoRef.current.dataset.pausedByUser = "true"; 
+                          }
+                          videoRef.current.dataset.autoPaused = "false"; 
+                      }}
+                      onPlay={() => {
+                          if (videoRef.current) {
+                              videoRef.current.dataset.pausedByUser = "false"; 
+                          }
+                      }}
+                  >
+                      <source src={videoPortada} type="video/mp4" />
+                      Your browser does not support the video tag.
+                  </motion.video>
+                  
+                   
+                    
                   </div>   
 
 

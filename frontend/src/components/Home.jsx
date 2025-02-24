@@ -1,9 +1,9 @@
-import { useState } from "react";
+import { useState , useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { slides } from '../constants/info';
 import { categoryMethods } from '../constants/info';
 import {motion} from "framer-motion";
-import { useRef } from "react";
+
 
 {/*import imgvideo from "../assets/profile-pictures/pruebafb.jpg";*/}
 import videoPortada from "../assets/rspjobadvices.mp4";
@@ -110,6 +110,7 @@ const Home = () => {
 
           <div className="px-4 lg:px-12 max-w-screen-2xl mx-auto pt-60">
                <div className="md:w-11/12 mx-auto flex flex-col md:flex-row justify-between items-center gap-24">
+                  
                   <div>
                     
                   <motion.video
@@ -117,7 +118,7 @@ const Home = () => {
                           if (it) {
                               it.volume = 0.13; //  se configura el  volumen
                               videoRef.current = it;
-                              videoRef.current.dataset.pausedByUser = "false"; // Inicializar
+                              videoRef.current.dataset.pausedByUser = "false"; 
                           }
                       }}
                       controls
@@ -166,6 +167,11 @@ const Home = () => {
                  
 
           </div>
+
+           {/* FIN del texto con video con boton para buscar ofertas */}
+
+
+           
 
 
         

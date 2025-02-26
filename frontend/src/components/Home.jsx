@@ -171,11 +171,38 @@ const Home = () => {
            {/* FIN del texto con video con boton para buscar ofertas */}
 
 
-           
 
+        {/* ----------------Seccion de estadisticas RSP ----------------*/}
 
         
-     
+        <div className="flex flex-col md:flex-row items-center justify-between bg-gray-100 p-10 rounded-lg shadow-lg mt-20  space-x-20">
+            {/* Sección Izquierda */}
+            <div className="md:w-1/2 text-left mt-8 pl-7">
+                <h2 className="text-3xl font-bold text-gray-800 uppercase">Líderes de reclutamiento digital en todo el pais</h2>
+                <p className="text-gray-600 mt-7">Con una  <span className="font-bold"> sólida trayectoria en la entrega de servicios de selección de personal excepcionales, </span> hemos colaboramos con muchas empresas alrededor de {" "} 
+                Colombia para encontrar y contratar talento de <span className="font-semibold"> primera calidad</span>. Nuestra tasa de satisfacción del <span className="font-extrabold"> 96%</span>  refleja nuestro compromiso 
+                  con la excelencia y satisfacción de nuestros clientes. Para conocer más de nosotros, <span className="font-semibold">  dirígete a :</span>
+                </p>
+                <button className="mt-6 px-6 py-2 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600">
+                    Acerca de RSP
+                </button>
+            </div>
+            
+            {/* Sección Derecha */}
+            <div className="md:w-1/2 grid grid-cols-2 gap-6 mb-3 pl-6">
+                {[
+                    { value: "100000+", label: "Candidatos Alcanzados" },
+                    { value: "40", label: "Reclutadores Calificados" },
+                    { value: "1000+", label: "Ofertas Publicadas" },
+                    { value: "15", label: "Metodos de Reclutamiento" }
+                ].map((stat, index) => (
+                    <div key={index} className="text-center">
+                        <p className="text-4xl font-bold text-blue-500">{stat.value}</p>
+                        <p className="text-gray-600 font-semibold">{stat.label}</p>
+                    </div>
+                ))}
+            </div>
+        </div>
       
 
 

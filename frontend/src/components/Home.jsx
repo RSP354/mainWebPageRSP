@@ -3,6 +3,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { slides } from '../constants/info';
 import { categoryMethods } from '../constants/info';
 import {motion} from "framer-motion";
+import CountUp from 'react-countup';
 
 
 {/*import imgvideo from "../assets/profile-pictures/pruebafb.jpg";*/}
@@ -25,6 +26,14 @@ const Home = () => {
   const videoRef = useRef(null);
    
    
+  const stats = [
+    { value: 100000, label: 'Candidatos Alcanzados', showPlus: true },
+    { value: 40, label: 'Reclutadores Calificados', showPlus: false },
+    { value: 1000, label: 'Ofertas Publicadas', showPlus: true },
+    { value: 15, label: 'Métodos de Reclutamiento', showPlus: false },
+  ];
+
+
 
 
 
@@ -175,36 +184,51 @@ const Home = () => {
         {/* ----------------Seccion de estadisticas RSP ----------------*/}
 
         
-        <div className="flex flex-col md:flex-row items-center justify-between bg-gray-100 p-10 rounded-lg shadow-lg mt-20  space-x-20">
-            {/* Sección Izquierda */}
-            <div className="md:w-1/2 text-left mt-8 pl-7">
-                <h2 className="text-3xl font-bold text-gray-800 uppercase">Líderes de reclutamiento digital en todo el pais</h2>
-                <p className="text-gray-600 mt-7">Con una  <span className="font-bold"> sólida trayectoria en la entrega de servicios de selección de personal excepcionales, </span> hemos colaboramos con muchas empresas alrededor de {" "} 
-                Colombia para encontrar y contratar talento de <span className="font-semibold"> primera calidad</span>. Nuestra tasa de satisfacción del <span className="font-extrabold"> 96%</span>  refleja nuestro compromiso 
-                  con la excelencia y satisfacción de nuestros clientes. Para conocer más de nosotros, <span className="font-semibold">  dirígete a :</span>
-                </p>
-                <button className="mt-6 px-6 py-2 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600">
-                    Acerca de RSP
-                </button>
-            </div>
-            
-            {/* Sección Derecha */}
-            <div className="md:w-1/2 grid grid-cols-2 gap-6 mb-3 pl-6">
-                {[
-                    { value: "100000+", label: "Candidatos Alcanzados" },
-                    { value: "40", label: "Reclutadores Calificados" },
-                    { value: "1000+", label: "Ofertas Publicadas" },
-                    { value: "15", label: "Metodos de Reclutamiento" }
-                ].map((stat, index) => (
-                    <div key={index} className="text-center">
-                        <p className="text-4xl font-bold text-blue-500">{stat.value}</p>
-                        <p className="text-gray-600 font-semibold">{stat.label}</p>
-                    </div>
-                ))}
-            </div>
-        </div>
-      
+        <div className="flex flex-col md:flex-row items-center justify-between bg-gray-100 p-10 rounded-lg shadow-lg mt-20 md:space-x-20  md:space-y-0">
+  {/* Sección Izquierda */}
+  <div className="md:w-1/2 text-left mt-8 pl-7">
+    <h2 className="text-3xl lg:text-2xl md:text-xl font-bold text-gray-800 uppercase">
+      Líderes de reclutamiento digital en todo el país
+    </h2>
+    <p className="text-gray-600 mt-7 text-lg lg:text-base md:text-sm">
+      Con una{' '}
+      <span className="font-bold">
+        sólida trayectoria en la entrega de servicios de selección de
+        personal excepcionales,
+      </span>{' '}
+      hemos colaborado con muchas empresas alrededor de Colombia para
+      encontrar y contratar talento de{' '}
+      <span className="font-semibold">primera calidad</span>. Nuestra tasa
+      de satisfacción del <span className="font-extrabold">96%</span>{' '}
+      refleja nuestro compromiso con la excelencia y satisfacción de
+      nuestros clientes. Para conocer más de nosotros,{' '}
+      <span className="font-semibold">dirígete a :</span>
+    </p>
+    <button className="mt-6 px-6 py-2 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 text-lg lg:text-base md:text-sm">
+      Acerca de RSP
+    </button>
+  </div>
 
+  {/* Sección Derecha */}
+  <div className="md:w-1/2 grid grid-cols-2 gap-6 mb-3  pl-6 sm:mt-20  md:pl-0  min-[300px]:mt-20   min-[300px]:pl-0">
+    {stats.map((stat, index) => (
+      <div key={index} className="text-center">
+        <span className="text-4xl font-bold text-blue-500 md:text-3xl sm:text-3xl  min-[300px]:text-2xl">
+          <CountUp
+            end={stat.value}
+            duration={2}
+            separator="."
+            enableScrollSpy
+          />
+          {stat.showPlus && '+'}
+        </span>
+        <p className="text-gray-600 font-semibold md:text-sm sm:text-base  min-[300px]:text-xs">
+          {stat.label}
+        </p>
+      </div>
+    ))}
+  </div>
+</div>
 
 
 

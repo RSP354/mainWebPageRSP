@@ -40,54 +40,63 @@ const Home = () => {
   return (
     <>
 
-    {/* Carrousel */}
+    {/*----------------------- Carrousel -----------------------*/}
 
-      <div className="relative w-full h-screen flex items-center justify-center bg-gray-100  border border-gray-600 shadow-lg rounded-lg  overflow-hidden">
-       {/* Contenedor de texto a la izquierda */}
-      <div className="w-1/2 h-full flex flex-col justify-center items-center pl-12 pr-2  max-h-64 overflow-hidden ">
-        <h2 className="text-2xl font-bold text-gray-800 mb-2 text-center  ">{slides[current].text}</h2>
-        <p className="text-lg text-green-600 font-semibold mt-4 text-center  ">{slides[current].highlight}</p>
-      </div>
-      {/* Imagen a la derecha */}
-      <div className="w-1/2 h-full">
-        <img
-          src={slides[current].image}
-          alt="Slide"
-          className="w-full h-full object-cover rounded-r-lg"
-        />
-      </div>
-     {/* Botón Izquierdo*/}
-    <button
-      className="absolute left-0 top-1/2 transform -translate-y-1/2 p-3 rounded-full transition-all duration-300 hover:bg-white/95"
-      onClick={prevSlide}
-    >
-      <ChevronLeft className="w-8 h-8 text-gray-500" />
-    </button>
+    <div className="relative w-full h-[600px]   xl:h-screen flex flex-col md:flex-row items-center justify-center bg-gray-100 border border-gray-600 shadow-lg rounded-lg overflow-hidden">
+  {/* Contenedor de texto a la izquierda */}
+  <div className="w-full md:w-1/2 h-1/2 md:h-full flex flex-col justify-center items-center p-4 md:pl-12 md:pr-2 max-h-64 overflow-hidden ">
+    <h2 className="text-lg md:text-2xl font-bold text-gray-800 mb-2 text-center">
+      {slides[current].text}
+    </h2>
+    <p className="text-base md:text-lg text-green-600 font-semibold mt-2 md:mt-4 text-center">
+      {slides[current].highlight}
+    </p>
+  </div>
 
-      {/* Botón Derecho */}
+  {/* Imagen a la derecha */}
+  <div className="w-full md:w-1/2 h-1/2 md:h-full">
+    <img
+      src={slides[current].image}
+      alt="Slide"
+      className="w-full h-full object-cover "
+    />
+  </div>
+
+  {/* Botón Izquierdo*/}
+  <button
+    className="absolute left-2 md:left-0 top-1/2 transform -translate-y-1/2 p-2 md:p-3 rounded-full transition-all duration-300 hover:bg-white/95"
+    onClick={prevSlide}
+  >
+    <ChevronLeft className="w-6 h-6 md:w-8 md:h-8 text-gray-500" />
+  </button>
+
+  {/* Botón Derecho */}
+  <button
+    className="absolute right-2 md:right-3 top-1/2 transform -translate-y-1/2 p-2 md:p-3 rounded-full transition-all duration-300 hover:bg-white/70"
+    onClick={nextSlide}
+  >
+    <ChevronRight className="w-6 h-6 md:w-8 md:h-8 text-gray-500" />
+  </button>
+
+  {/* Puntos de navegación */}
+  <div className="absolute bottom-2 md:bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
+    {slides.map((_, index) => (
       <button
-        className="absolute right-3 top-1/2 transform -translate-y-1/2 p-3 rounded-full transition-all duration-300 hover:bg-white/70"
-        onClick={nextSlide}
-      >
-        <ChevronRight className="w-8 h-8 text-gray-500" />
-      </button>
+        key={index}
+        onClick={() => setCurrent(index)}
+        className={`w-2 h-2 md:w-3 md:h-3 rounded-full transition-all duration-300 outline-none focus:ring-2 focus:ring-green-400 ${
+          index === current ? "bg-green-400 md:w-4 md:h-4 scale-110" : "bg-gray-300"
+        } cursor-pointer hover:scale-110`}
+      />
+    ))}
+  </div>
+</div>
+  
+      
+       {/* --------- Fin del carrousel -----------*/}
 
-        {/* Puntos de navegación  */}
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
-        {slides.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrent(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-300 outline-none focus:ring-2 focus:ring-green-400 ${
-              index === current ? "bg-green-400 w-4 h-4 scale-110" : "bg-gray-300"
-            } cursor-pointer hover:scale-110`}
-          />
-        ))}
-      </div>
-      </div>
-       {/*  Fin del carrousel */}
 
-         {/* inicio de los cards de metodos */}
+         {/*-------------- inicio de los cards de metodos ----------------*/}
 
      <div className="pt-36 container max-w-screen-xl mx-auto">
       <div>

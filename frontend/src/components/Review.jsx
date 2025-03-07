@@ -3,7 +3,7 @@ import { useAnimation, useInView, motion } from "framer-motion";
 import { FaStar} from 'react-icons/fa';
  
 
-
+ {/*  Imagenes de los testimoniales de la seccion del home */}
 import camiloPic from '../assets/profile-pictures/testimonio1.png'
  import stevenPic from '../assets/profile-pictures/testimonio2.png'
  import melisaPic from '../assets/profile-pictures/testimonio3.png'
@@ -25,7 +25,7 @@ import camiloPic from '../assets/profile-pictures/testimonio1.png'
 
 
      return( 
-     <div className="overflow-x-hidden max-w-screen mt-40">
+     <div className="overflow-x-hidden max-w-screen-2xl mt-20">
        <div className="text-black">
       
       {Width < 631 ? (

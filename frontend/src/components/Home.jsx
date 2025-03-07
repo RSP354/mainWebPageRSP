@@ -11,17 +11,7 @@ import videoPortada from "../assets/rspjobadvices.mp4";
 
 
 
- {/*  Imagenes de los testimoniales de la seccion del home
-  
-   import camiloPic from '../assets/profile-pictures/testimonio1.png'
- import stevenPic from '../assets/profile-pictures/testimonio2.png'
- import melisaPic from '../assets/profile-pictures/testimonio3.png'
- import sandraPic from '../assets/profile-pictures/testimonio4.png'
-  
-
-import { FaStar} from 'react-icons/fa';
-   
-  */}
+ 
  
 
 
@@ -209,161 +199,54 @@ const Home = () => {
         {/* ----------------Seccion de estadisticas RSP ----------------*/}
 
         
-        <div className="flex flex-col md:flex-row items-center justify-between bg-gray-100 p-10 rounded-lg shadow-lg mt-44 md:space-x-20  md:space-y-0">
-  {/* Sección Izquierda */}
-  <div className="md:w-1/2 text-left mt-8 pl-7">
-    <h2 className="text-3xl lg:text-2xl md:text-xl font-bold text-gray-800 uppercase">
-      Líderes de reclutamiento digital en todo el país
-    </h2>
-    <p className="text-gray-600 mt-7 text-lg lg:text-base md:text-sm">
-      Con una{' '}
-      <span className="font-bold">
-        sólida trayectoria en la entrega de servicios de selección de
-        personal excepcionales,
-      </span>{' '}
-      hemos colaborado con muchas empresas alrededor de Colombia para
-      encontrar y contratar talento de{' '}
-      <span className="font-semibold">primera calidad</span>. Nuestra tasa
-      de satisfacción del <span className="font-extrabold">96%</span>{' '}
-      refleja nuestro compromiso con la excelencia y satisfacción de
-      nuestros clientes. Para conocer más de nosotros,{' '}
-      <span className="font-semibold">dirígete a :</span>
-    </p>
-    <button className="mt-6 px-6 py-2 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 text-lg lg:text-base md:text-sm">
-      Acerca de RSP
-    </button>
-  </div>
+        <div className="flex flex-col md:flex-row items-center justify-between bg-gray-100 p-10 rounded-lg shadow-lg mt-52 md:space-x-20  md:space-y-0">
+            {/* Sección Izquierda */}
+            <div className="md:w-1/2 text-left mt-8 pl-7">
+              <h2 className="text-3xl lg:text-2xl md:text-xl font-bold text-gray-800 uppercase">
+                Líderes de reclutamiento digital en todo el país
+              </h2>
+              <p className="text-gray-600 mt-7 text-lg lg:text-base md:text-sm">
+                Con una{' '}
+                <span className="font-bold">
+                  sólida trayectoria en la entrega de servicios de selección de
+                  personal excepcionales,
+                </span>{' '}
+                hemos colaborado con muchas empresas alrededor de Colombia para
+                encontrar y contratar talento de{' '}
+                <span className="font-semibold">primera calidad</span>. Nuestra tasa
+                de satisfacción del <span className="font-extrabold">96%</span>{' '}
+                refleja nuestro compromiso con la excelencia y satisfacción de
+                nuestros clientes. Para conocer más de nosotros,{' '}
+                <span className="font-semibold">dirígete a :</span>
+              </p>
+              <button className="mt-6 px-6 py-2 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 text-lg lg:text-base md:text-sm">
+                Acerca de RSP
+              </button>
+            </div>
 
-  {/* Sección Derecha */}
-  <div className="md:w-1/2 grid grid-cols-2 gap-6 mb-3  pl-6 sm:mt-20  md:pl-0  min-[300px]:mt-20   min-[300px]:pl-0">
-    {stats.map((stat, index) => (
-      <div key={index} className="text-center">
-        <span className="text-4xl font-bold text-blue-500 md:text-3xl sm:text-3xl  min-[300px]:text-2xl">
-          <CountUp
-            end={stat.value}
-            duration={2}
-            separator="."
-            enableScrollSpy
-          />
-          {stat.showPlus && '+'}
-        </span>
-        <p className="text-gray-600 font-semibold md:text-sm sm:text-base  min-[300px]:text-xs">
-          {stat.label}
-        </p>
-      </div>
-    ))}
-  </div>
-</div>
+            {/* Sección Derecha */}
+            <div className="md:w-1/2 grid grid-cols-2 gap-6 mb-3  pl-6 sm:mt-20  md:pl-0  min-[300px]:mt-20   min-[300px]:pl-0">
+              {stats.map((stat, index) => (
+                <div key={index} className="text-center">
+                  <span className="text-4xl font-bold text-blue-500 md:text-3xl sm:text-3xl  min-[300px]:text-2xl">
+                    <CountUp
+                      end={stat.value}
+                      duration={2}
+                      separator="."
+                      enableScrollSpy
+                    />
+                    {stat.showPlus && '+'}
+                  </span>
+                  <p className="text-gray-600 font-semibold md:text-sm sm:text-base  min-[300px]:text-xs">
+                    {stat.label}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
     
     {/* ----------------------- seccion testimoniales ------------------*/}
      
-
-       {/*
-       
-        <div className="overflow-x-hidden max-w-screen mt-40">
-     <div className="text-black">
-	<div className="container px-6 py-12 mx-auto">
-		<div className="grid items-center gap-4 xl:grid-cols-5">
-			<div className="max-w-2xl mx-auto rounded shadow-md bg-blue-100/20 p-6 my-8 space-y-4 text-center xl:col-span-2 xl:text-left">
-				<h2 className="text-4xl font-bold text-black">Lo que opinan de nosotros</h2>
-				<p className="dark:text-gray-600">Aqui hay algunos testimonios de los clientes que nos conocen</p>
-			</div>
-			<div className="p-6 xl:col-span-3">
-				<div className="grid gap-4 md:grid-cols-2">
-					<div className="grid content-center gap-4">
-						<div className="p-6 rounded shadow-md bg-blue-200/30 ">
-								<img src={camiloPic} alt="" className="w-20 h-20  mx-auto object-cover   rounded-full dark:bg-gray-500" />
-                <div className="flex justify-center mt-4">
-                 {[...Array(5)].map((_, index) => (
-              <FaStar key={index} className="text-yellow-400 text-lg" />
-               ))}
-               </div>
-
-               <div className="flex justify-center mt-4 ">
-								<div>
-									<p className="text-lg font-semibold">Camilo Correa</p>
-									<p className="text-sm text-gray-600">Usuario de Facebook</p>
-								</div>
-                </div>
-
-
-							<p className="mt-4 text-center"> Esta página es excelente para buscar empleo, ya que constantemente publican muchas vacantes en diversas áreas. Su plataforma es fácil de usar, lo que facilita la búsqueda y postulación a los trabajos. Sin duda, una gran herramienta para quienes están en busca de nuevas oportunidades laborales.</p>
-							
-						</div>
-						<div className="p-6 rounded shadow-md bg-blue-200/60">
-            <img src={melisaPic} alt="" className="w-20 h-20   mx-auto object-cover   rounded-full dark:bg-gray-500" />
-                <div className="flex justify-center mt-4">
-                 {[...Array(5)].map((_, index) => (
-              <FaStar key={index} className="text-yellow-400 text-lg" />
-               ))}
-               </div>
-
-               <div className="flex justify-center mt-4 ">
-								<div>
-									<p className="text-lg font-semibold">Melisa Lopera</p>
-									<p className="text-sm text-gray-600">Usuaria de Google</p>
-								</div>
-                </div>
-
-
-							<p className="mt-4 text-center"> Me sorprendió la cantidad de vacantes que publican cada día.  La recomiendo a cualquiera que esté buscando nuevas oportunidades laborales.</p>
-						</div>
-					</div>
-					<div className="grid content-center gap-4">
-						<div className="p-6 rounded shadow-md bg-blue-200/60">
-            <img src={sandraPic} alt="" className="w-20 h-20   mx-auto object-cover   rounded-full dark:bg-gray-500" />
-                <div className="flex justify-center mt-4">
-                 {[...Array(5)].map((_, index) => (
-              <FaStar key={index} className="text-yellow-400 text-lg" />
-               ))}
-               </div>
-
-               <div className="flex justify-center mt-4 ">
-								<div>
-									<p className="text-lg font-semibold">Sandra Zapata</p>
-									<p className="text-sm text-gray-600">Usuario de Google</p>
-								</div>
-                </div>
-
-
-							<p className="mt-4 text-center"> Encontrar empleo puede ser complicado, pero con esta plataforma ha sido mucho más fácil y rápido. Me ha permitido acceder a ofertas de calidad y conectar con empresas serias. ¡Estoy muy satisfecho con mi experiencia! </p>
-						</div>
-						<div className="p-6 rounded shadow-md bg-blue-200/30">
-            <img src={stevenPic} alt="" className="w-20 h-20   mx-auto object-cover   rounded-full dark:bg-gray-500" />
-                <div className="flex justify-center mt-4">
-                 {[...Array(5)].map((_, index) => (
-              <FaStar key={index} className="text-yellow-400 text-lg" />
-               ))}
-               </div>
-
-               <div className="flex justify-center mt-4 ">
-								<div>
-									<p className="text-lg font-semibold">Steven Ospina </p>
-									<p className="text-sm text-gray-600">Usuario de Facebook</p>
-								</div>
-                </div>
-
-
-							<p className="mt-4 text-center">  Lo que más me gusta de esta plataforma es que las vacantes son actualizadas constantemente y están bien detalladas. No pierdo tiempo con ofertas desactualizadas o poco claras. Ha sido una gran herramienta para mi crecimiento profesional.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-    </div>
-
-     </div>
-
-       
-       
-       
-       
-       */ }
-
-        
-    
-
       <Review />
     
 

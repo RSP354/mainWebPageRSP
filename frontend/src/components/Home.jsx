@@ -4,19 +4,25 @@ import { slides } from '../constants/info';
 import { categoryMethods } from '../constants/info';
 import {motion} from "framer-motion";
 import CountUp from 'react-countup';
-import { FaStar} from 'react-icons/fa';
-
+import Review from "./Review";
 
 {/*import imgvideo from "../assets/profile-pictures/pruebafb.jpg";*/}
 import videoPortada from "../assets/rspjobadvices.mp4";
 
 
 
- {/*  Imagenes de los testimoniales de la seccion del home*/}
- import camiloPic from '../assets/profile-pictures/testimonio1.png'
+ {/*  Imagenes de los testimoniales de la seccion del home
+  
+   import camiloPic from '../assets/profile-pictures/testimonio1.png'
  import stevenPic from '../assets/profile-pictures/testimonio2.png'
  import melisaPic from '../assets/profile-pictures/testimonio3.png'
  import sandraPic from '../assets/profile-pictures/testimonio4.png'
+  
+
+import { FaStar} from 'react-icons/fa';
+   
+  */}
+ 
 
 
 
@@ -251,7 +257,10 @@ const Home = () => {
     
     {/* ----------------------- seccion testimoniales ------------------*/}
      
-     <div className="overflow-x-hidden max-w-screen mt-40">
+
+       {/*
+       
+        <div className="overflow-x-hidden max-w-screen mt-40">
      <div className="text-black">
 	<div className="container px-6 py-12 mx-auto">
 		<div className="grid items-center gap-4 xl:grid-cols-5">
@@ -345,9 +354,17 @@ const Home = () => {
     </div>
 
      </div>
+
+       
+       
+       
+       
+       */ }
+
+        
     
 
-    
+      <Review />
     
 
      

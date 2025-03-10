@@ -9,15 +9,14 @@ import Review from "./Review";
 {/*import imgvideo from "../assets/profile-pictures/pruebafb.jpg";*/}
 import videoPortada from "../assets/rspjobadvices.mp4";
 
+import emailsubs from "../assets/emailsub.png"
+
 
 
  
  
 
 
-
-
-   
 
 
 
@@ -245,12 +244,35 @@ const Home = () => {
             </div>
           </div>
     
-    {/* ----------------------- seccion testimoniales ------------------*/}
+    {/* ----------------------- seccion testimoniales ------------------*/}  
      
       <Review />
-    
+
+
+  {/* ------ Seccion de suscribirse a nuestras ofertas  del home page -------- */}
+
+    <div className="w-full bg-gray-300/60 mt-40 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${emailsubs})` }}>
+          <div className="container flex flex-col flex-wrap content-center justify-center p-4 py-20 mx-auto md:p-10">
+            <h1 className="text-4xl antialiased font-semibold leading-none text-center dark:text-gray-800">Obten nuestras ofertas!</h1>
+            <p className="pt-2 pb-8 text-xl antialiased text-center dark:text-gray-800">Recibe emails, novedades y actualizaciones de RSP </p>
+            <div className="flex flex-row">
+              <input type="text" placeholder="ejemplo@gmail.com" className="w-3/5 p-3 rounded-l-lg sm:w-2/3" />
+              <button 
+          type="button" 
+          className="w-2/5 p-3 font-semibold rounded-r-lg sm:w-1/3 dark:bg-default-600 dark:text-gray-50 
+          transition-transform duration-300 transform hover:scale-105"
+        >
+          Suscríbete
+        </button>
+
+            </div>
+          </div>
+        </div>
 
      
+
+
+
 
      </>
   );

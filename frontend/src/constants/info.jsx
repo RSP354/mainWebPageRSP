@@ -56,3 +56,53 @@ export const categoryMethods  = [
   {id: 3, title: "Recomendaciones Internas", desc: "Candidatos referidos por nuestros partners",  pic: graphCtg3 },
   {id: 4, title: "Headhunting Ejecutivo", desc: "Captación de talento en el mercado global",  pic: graphCtg4 },
 ];
+
+
+
+{/* Seccion INFO de FAQS HOMEPAGE   */ }
+
+export const FAQS = [
+  {
+    question: "¿Qué servicios de reclutamiento y selección ofrecen?",
+    answer:
+      "Ofrecemos servicios de reclutamiento y selección de talento para diversas industrias. Nos encargamos de todo el proceso, desde la búsqueda de candidatos hasta la evaluación y contratación, asegurando que encuentre el mejor talento para su empresa.",
+  },
+  {
+    question: "¿Cómo seleccionan a los candidatos?",
+    answer:
+      "Utilizamos un proceso de selección basado en pruebas de competencias, entrevistas estructuradas y evaluaciones psicométricas. Además, realizamos una validación exhaustiva de la experiencia y referencias de cada candidato.",
+  },
+  {
+    question: "¿Qué tipo de perfiles pueden reclutar?",
+    answer:
+      "Podemos reclutar perfiles para diversas áreas, incluyendo puestos operativos, administrativos, técnicos y de alta dirección. Nos adaptamos a las necesidades específicas de cada empresa para garantizar la mejor selección.",
+  },
+  {
+    question: "¿Cuánto tiempo tarda el proceso de selección?",
+    answer:
+      "El tiempo varía según la complejidad del perfil requerido, pero en general, el proceso de selección puede durar entre 1 y 4 semanas. Nos aseguramos de realizar una selección eficiente sin comprometer la calidad del talento elegido.",
+  },
+  {
+    question: "¿Ofrecen garantía en la contratación?",
+    answer:
+      "Sí, ofrecemos una garantía en la contratación. Si el candidato seleccionado no cumple con las expectativas dentro de un período determinado, realizamos un reemplazo sin costo adicional.",
+  },
+  {
+    question: "¿Pueden manejar procesos de selección masivos?",
+    answer:
+      "Sí, contamos con la capacidad para llevar a cabo procesos de selección masivos, garantizando rapidez y eficiencia en la contratación de múltiples candidatos para su empresa.",
+  },
+  {
+    question: "¿Brindan servicios de consultoría en recursos humanos?",
+    answer:
+      "Sí, además del reclutamiento y selección, ofrecemos consultoría en recursos humanos para optimizar sus procesos de talento, mejorar el clima organizacional y desarrollar estrategias de retención de empleados.",
+  },
+  {
+    question: "¿Cómo puedo solicitar sus servicios?",
+    answer:
+      "Puede contactarnos a través de nuestro sitio web, correo electrónico o teléfono. Uno de nuestros consultores se pondrá en contacto con usted para analizar sus necesidades y ofrecerle una solución personalizada.",
+  },
+];
+
+export const FAQ_DESCRIPTION =
+  "Explore respuestas rápidas a dudas o preguntas sobre RSP en nuestra sección de ayuda. Ya sea sobre nuestros servicios, políticas o más, encuentre la información que necesita. ¿Necesita más ayuda? ¡Comuníquese con nuestro servicio de atención al cliente para obtener asistencia personalizada!";

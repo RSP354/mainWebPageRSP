@@ -23,11 +23,11 @@ const App = () => {
       <Workflow />
       <Pricing />
      <FeatureSection />
+       <Testimonials />
 
         <Footer />
      */} 
        
-       <Testimonials />
       
 
      </div>

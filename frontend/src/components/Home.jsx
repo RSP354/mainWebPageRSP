@@ -9,10 +9,15 @@ import Review from "./Review";
 {/*import imgvideo from "../assets/profile-pictures/pruebafb.jpg";*/}
 import videoPortada from "../assets/rspjobadvices.mp4";
 
+
+{/* imagen del llamado a subscribirse para dejar correo */ }
 import emailsubs from "../assets/emailsub.png"
 
+{/*  Importanciones de INFO De FAQ de CONSTS*/}
 
-
+import { FAQ_DESCRIPTION } from "../constants/info";
+ import { FAQS } from "../constants/info";
+import { FaMinus, FaPlus } from "react-icons/fa";
  
  
 
@@ -28,9 +33,10 @@ const Home = () => {
   const nextSlide = () => setCurrent((prev) => (prev === slides.length - 1 ? 0 : prev + 1));  
 
   
+  {/* Funcionamiento del video */ }
   const videoRef = useRef(null);
    
-   
+   {/*   Seccion de estadisticas */}
   const stats = [
     { value: 100000, label: 'Candidatos Alcanzados', showPlus: true },
     { value: 40, label: 'Reclutadores Calificados', showPlus: false },
@@ -38,8 +44,13 @@ const Home = () => {
     { value: 15, label: 'Métodos de Reclutamiento', showPlus: false },
   ];
 
+    {/*  Seccion funcionamiento de FAQS*/}
+    
+       const [activeIndex, setActiveIndex]  = useState(null);
 
-
+       const handleToggleCT = (index) => {
+         setActiveIndex(activeIndex === index  ? null: index);
+       }
 
 
   return (
@@ -269,7 +280,44 @@ const Home = () => {
           </div>
         </div>
 
-     
+       {/*  seccion de FAQ  */}
+        
+    <div className="mt-52" id="faq">
+      <div className="container mx-auto flex flex-col gap-12 p-8 lg:flex-row">
+         <div className="lg:w-1/3">
+            <h2 className="mb-8 text-4xl font-semibold tracking-tighter">
+              Preguntas más frecuentes
+            </h2>
+            <p className="mb-12 text-lg">{FAQ_DESCRIPTION}</p>
+         </div>
+         <div className="lg:w-2/3">
+            {FAQS.map((faq, index) => (
+               <div key={index} className="mb-4 border-b pb-4">
+                  <div className="flex cursor-pointer items-center
+                  justify-between p-8" onClick={() => handleToggleCT(index)}>
+
+                   <h3 className="text-2xl">{faq.question}</h3>
+                   <div>
+                     {activeIndex === index ? (
+                       <FaMinus className="text-xl" />
+                     ) : (
+                        <FaPlus className="text-xl" />
+                     )}
+                   </div>
+                  </div>
+                   <div className={`mt-4 overflow-hidden text-lg transition-all duration-500 ${
+                     activeIndex === index ?  "max-h-screen" : "max-h-0"
+                   }`}>
+                      <p className="p-8">
+                         {faq.answer}
+                      </p>
+                   </div>
+               </div>
+            ))}
+         </div>
+      </div>
+   </div>
+
 
 
 

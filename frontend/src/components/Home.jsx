@@ -20,9 +20,9 @@ import { FAQ_DESCRIPTION } from "../constants/info";
 import { FaMinus, FaPlus } from "react-icons/fa";
  
  
+import contactHM from "../assets/profile-pictures/contactsHome.png"
 
-
-
+import { FiSend } from "react-icons/fi";
 
 
 const Home = () => {
@@ -270,7 +270,7 @@ const Home = () => {
               <input type="text" placeholder="ejemplo@gmail.com" className="w-3/5 p-3 rounded-l-lg sm:w-2/3" />
               <button 
           type="button" 
-          className="w-2/5 p-3 font-semibold rounded-r-lg sm:w-1/3 dark:bg-default-600 dark:text-gray-50 
+          className="w-2/5 p-3 font-semibold rounded-r-lg sm:w-1/3 bg-default-600 dark:text-gray-50 
           transition-transform duration-300 transform hover:scale-105"
         >
           Suscríbete
@@ -318,7 +318,34 @@ const Home = () => {
       </div>
    </div>
 
+    {/* ----------- Seccion de contacto en la parte de abajo  -------------*/}
+          
+  <div className="grid max-w-screen-xl grid-cols-1 gap-8 mt-52 px-8 py-16 mx-auto rounded-lg md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 bg-indigo-200 text-gray-800">
+          <div className="flex flex-col justify-between">
+          <div className="space-y-2">
+          <h2 className="text-4xl font-bold leading-tight lg:text-5xl">Escribenos!</h2>
+          <div className="text-gray-600">Déjanos tus dudas o comentarios y nuestro equipo de reclutamiento te responderá en breve.</div>
+          </div>
+          <img src={contactHM} alt="" className="mt-16 h-full pr-40 rounded-s-full" />
+        </div>
+        <form noValidate="" className="space-y-6">
+          <div>
+            <label htmlFor="name" className="text-sm">Nombre</label>
+            <input id="name" type="text" placeholder="" className="w-full p-3 rounded bg-gray-100" />
+          </div>
+          <div>
+            <label htmlFor="email" className="text-sm">Correo</label>
+            <input id="email" type="email" className="w-full p-3 rounded bg-gray-100" />
+          </div>
+          <div>
+            <label htmlFor="message" className="text-sm">Mensaje</label>
+            <textarea id="message" rows="3" className="w-full p-3 rounded bg-gray-100"></textarea>
+          </div>
+          <button type="submit" className="w-full p-3 text-sm font-bold tracking-wide uppercase rounded bg-emerald-600 text-gray-50"> <div className="flex items-center justify-center gap-2">  Enviar Mensaje <FiSend /></div></button>
+        </form>
+      </div>
 
+        
 
 
 

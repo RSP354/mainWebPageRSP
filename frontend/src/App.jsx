@@ -7,15 +7,18 @@ import Pricing from './components/Pricing'
 import Testimonials from './components/Testimonials'
 import Footer from './components/Footer'
 import Home from './components/Home';
+import FooterCT from './components/FooterRsp'
 
 const App = () => {
   return (
     <>
     <Navbar />
-    <div className='pt-20 px-6'>
+    <div className='pt-20 px-6 '>
      < Home  /> 
+        </div>
+ 
+       
         
-      </div>
 
      <div className="max-w-7xl mx-auto pt-32 px-6">
      {/* <HeroSection /> 
@@ -24,15 +27,17 @@ const App = () => {
       <Pricing />
      <FeatureSection />
        <Testimonials />
-
         <Footer />
      */} 
        
-      
-
-     </div>
+  
+        </div>
     
-    </>
+
+        <FooterCT />
+     </>
+  
+     
   )
 }
 

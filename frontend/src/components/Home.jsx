@@ -326,7 +326,9 @@ const Home = () => {
           <h2 className="text-4xl font-bold leading-tight lg:text-5xl">Escribenos!</h2>
           <div className="text-gray-600">Déjanos tus dudas o comentarios y nuestro equipo de reclutamiento te responderá en breve.</div>
           </div>
-          <img src={contactHM} alt="" className="mt-16 h-full pr-40 rounded-s-full" />
+          
+        <img src={contactHM} alt="" className="mt-16  h-full w-full   md:pr-24  lg:pr-40 rounded-full     md:rounded-s-full" />
+        
         </div>
         <form noValidate="" className="space-y-6">
           <div>

@@ -1,19 +1,25 @@
-import React from 'react'
-import Navbar from './components/Navbar'
-import Home from './components/Home';
-import FooterCT from './components/FooterRsp'
+import { BrowserRouter, Routes, Route} from 'react-router-dom'
+import Portada from './layoutMasters/Portada'
+
+import Home from './paginas/Home';
+import Servicios from './paginas/Servicios';
+
 
 const App = () => {
   return (
-    <>
-    <Navbar />
-    <div className='pt-20 px-6 '>
-     < Home  /> 
-        </div>
-        <FooterCT />
-     </>
-  
-     
+    <BrowserRouter>
+      <Routes>
+         <Route path='/' element={<Portada />}>
+              <Route index element={<Home />} />
+              <Route path='/serviciosRsp' element={<Servicios />} />
+
+         </Route>
+
+
+
+
+      </Routes>
+    </BrowserRouter> 
   )
 }
 

@@ -4,7 +4,7 @@ import { slides } from '../constants/info';
 import { categoryMethods } from '../constants/info';
 import {motion} from "framer-motion";
 import CountUp from 'react-countup';
-import Review from "./Review";
+import Review from "../components/Review";
 
 {/*import imgvideo from "../assets/profile-pictures/pruebafb.jpg";*/}
 import videoPortada from "../assets/rspjobadvices.mp4";

@@ -11,25 +11,25 @@ const Navbar = () => {
    };
 
   return (
-    <nav className="sticky top-0 z-50 py-6 backdrop-blur-lg border-b border-neutral-700/80">
+    <nav className="sticky top-0 z-50 py-6   backdrop-blur-lg border-b  border-neutral-700/80   bg-gradient-to-t from-transparent to-black/25">
         <div className="container px-4 mx-auto relative text-sm">
             <div className="flex justify-between items-center">
             <div className="flex items-center flex-shrink-0">
                 <img className="h-14 w-14 mr-2" src={logo} alt="logo" />
-                <span className="text-xs sm:text-sm md:text-base  lg:text-base  xl:text-lg tracking-tight ">RSP (Reclutamiento y Seleccion de Personal)</span>
+                <span className="text-xs sm:text-sm md:text-base  lg:text-base  xl:text-lg tracking-tight font-medium text-white  drop-shadow-lg">RSP (Reclutamiento y Seleccion de Personal)</span>
             </div>
             <ul className="hidden lg:flex ml-3 xl:space-x-9 lg:space-x-5">
                 {navItems.map((item , index ) => (
                   <li key={index}>
-                    <a className="lg:text-sm  xl:text-base" href={item.href}>{item.label}</a>
+                    <a className="lg:text-sm  xl:text-base font-semibold text-white drop-shadow-lg" href={item.href}>{item.label}</a>
                   </li>
                 ))}
             </ul>
             <div className="hidden lg:flex justify-center xl:space-x-4 items-center lg:space-x-2  ">
-               <a href="#" className="py-2 px-3 border rounded-md   md:text-xs lg:text-sm xl:text-base "> 
+               <a href="#" className="py-2 px-3 font-medium border border-blue-600 rounded-md bg-gradient-to-r from-blue-300 to-blue-200    md:text-xs lg:text-sm xl:text-base "> 
                   Inicia Sesion
                </a>
-               <a href="#" className="bg-gradient-to-r from-green-500 to-green-600 text-white
+               <a href="#" className="border border-green-700 bg-gradient-to-r from-green-500 to-green-600 text-white
                py-2 px-3 rounded-md   md:text-xs lg:text-sm xl:text-base">
                  Registrate
                </a>
@@ -50,11 +50,10 @@ const Navbar = () => {
                    ))}
                  </ul>
                   <div className="flex space-x-6 py-5">
-                    <a href="#" className="py-2 px-3 border rounded-md">
+                    <a href="#" className="py-2 px-3 border border-blue-600 rounded-md  bg-gradient-to-r from-blue-300 to-blue-200 ">
                        Inicia Sesion
                     </a>
-                    <a href="#" className="py-2 px-3 rounded-md bg-gradient-to-r  
-                    from-green-500 to-green-700 text-white">
+                    <a href="#" className="py-2 px-3 rounded-md border border-green-700 bg-gradient-to-r from-green-500 to-green-600 text-white">
                        Registrate
                     </a>
                   </div>

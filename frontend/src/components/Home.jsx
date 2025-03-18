@@ -158,7 +158,7 @@ const Home = () => {
                       controls
                       controlsList="nodownload"
                       onContextMenu={(e) => e.preventDefault()}
-                      className="rounded-2xl border border-green-400 shadow-2xl shadow-green-500"
+                      className="rounded-2xl border border-gray-900 shadow-2xl shadow-indigo-50"
                       whileInView={{ opacity: 1 }}
                       initial={{ opacity: 0 }}
                       onViewportEnter={() => {
@@ -193,8 +193,8 @@ const Home = () => {
 
 
                   <div className="md:w-3/5 mx-auto">
-                       <h2 className="text-4xl text-gray-500 font-semibold mb-4 md:w-4/5 xl:w-full ">Conoce nuestras ofertas laborales mas recientes!</h2>
-                       <p className="md:w-3/4 text-sm text-gray-500 mb-8 ">Dirigete al siguiente boton para encontrar lo ultimo en ofertas de RSP</p>
+                       <h2 className="text-4xl text-indigo-50 drop-shadow-md font-semibold mb-4 md:w-4/5 xl:w-full ">Conoce nuestras ofertas laborales mas recientes!</h2>
+                       <p className="md:w-3/4 text-sm text-gray-800 mb-8 font-medium">Dirigete al siguiente boton para encontrar lo ultimo en ofertas de RSP!</p>
                        <button className="bg-green-600 text-white px-5 py-2 mx-auto">Descubre mas</button>
                   </div>
                </div>
@@ -285,27 +285,27 @@ const Home = () => {
     <div className="mt-52" id="faq">
       <div className="container mx-auto flex flex-col gap-12 p-8 lg:flex-row">
          <div className="lg:w-1/3">
-            <h2 className="mb-8 text-4xl font-semibold tracking-tighter">
+            <h2 className="mb-8 text-4xl font-bold tracking-tighter text-white drop-shadow-md">
               Preguntas más frecuentes
             </h2>
-            <p className="mb-12 text-lg">{FAQ_DESCRIPTION}</p>
+            <p className="mb-12 text-lg text-gray-800 font-medium">{FAQ_DESCRIPTION}</p>
          </div>
          <div className="lg:w-2/3">
             {FAQS.map((faq, index) => (
-               <div key={index} className="mb-4 border-b pb-4">
+               <div key={index} className="mb-4 border-b border-black pb-4">
                   <div className="flex cursor-pointer items-center
                   justify-between p-8" onClick={() => handleToggleCT(index)}>
 
-                   <h3 className="text-2xl">{faq.question}</h3>
+                   <h3 className="text-2xl text-yellow-200 font-bold drop-shadow-lg ">{faq.question}</h3>
                    <div>
                      {activeIndex === index ? (
-                       <FaMinus className="text-xl" />
+                       <FaMinus className="text-xl " />
                      ) : (
-                        <FaPlus className="text-xl" />
+                        <FaPlus className="text-xl text-white drop-shadow-md" />
                      )}
                    </div>
                   </div>
-                   <div className={`mt-4 overflow-hidden text-lg transition-all duration-500 ${
+                   <div className={`mt-4 overflow-hidden text-lg transition-all duration-500 bg-gray-200 ${
                      activeIndex === index ?  "max-h-screen" : "max-h-0"
                    }`}>
                       <p className="p-8">

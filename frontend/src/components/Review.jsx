@@ -32,18 +32,18 @@ import camiloPic from '../assets/profile-pictures/testimonio1.png'
         <>
           <div className="container px-6 py-12 mx-auto">
     <div className="grid items-center gap-4 xl:grid-cols-5">
-        <div className="max-w-2xl mx-auto rounded shadow-md bg-blue-100/20 p-6 my-8 space-y-4 text-center xl:col-span-2 xl:text-left">
+        <div className="max-w-2xl mx-auto rounded shadow-md bg-blue-50 p-6 my-8 space-y-4 text-center xl:col-span-2 xl:text-left">
             <h2 className="text-4xl font-bold text-black">Lo que opinan de nosotros</h2>
             <p className="dark:text-gray-600">Aqui hay algunos testimonios de los clientes que nos conocen</p>
         </div>
         <div className="p-6 xl:col-span-3">
             <div className="grid gap-4 md:grid-cols-2">
                 <div className="grid content-center gap-4">
-                    <div className="p-6 rounded shadow-md bg-blue-200/30 ">
+                    <div className="p-6 rounded shadow-md bg-blue-200 ">
                             <img src={camiloPic} alt="" className="w-20 h-20  mx-auto object-cover   rounded-full dark:bg-gray-500" />
             <div className="flex justify-center mt-4">
              {[...Array(5)].map((_, index) => (
-          <FaStar key={index} className="text-yellow-400 text-lg" />
+          <FaStar key={index} className="text-yellow-300 text-lg" />
            ))}
            </div>
 
@@ -58,11 +58,11 @@ import camiloPic from '../assets/profile-pictures/testimonio1.png'
                         <p className="mt-4 text-center"> Esta página es excelente para buscar empleo, ya que constantemente publican muchas vacantes en diversas áreas. Su plataforma es fácil de usar, lo que facilita la búsqueda y postulación a los trabajos. Sin duda, una gran herramienta para quienes están en busca de nuevas oportunidades laborales.</p>
                         
                     </div>
-                    <div className="p-6 rounded shadow-md bg-blue-200/60">
+                    <div className="p-6 rounded shadow-md bg-blue-100/80">
         <img src={melisaPic} alt="" className="w-20 h-20   mx-auto object-cover   rounded-full dark:bg-gray-500" />
             <div className="flex justify-center mt-4">
              {[...Array(5)].map((_, index) => (
-          <FaStar key={index} className="text-yellow-400 text-lg" />
+          <FaStar key={index} className="text-yellow-300 text-lg" />
            ))}
            </div>
 
@@ -78,11 +78,11 @@ import camiloPic from '../assets/profile-pictures/testimonio1.png'
                     </div>
                 </div>
                 <div className="grid content-center gap-4">
-                    <div className="p-6 rounded shadow-md bg-blue-200/60">
+                    <div className="p-6 rounded shadow-md bg-blue-100/80">
         <img src={sandraPic} alt="" className="w-20 h-20   mx-auto object-cover   rounded-full dark:bg-gray-500" />
             <div className="flex justify-center mt-4">
              {[...Array(5)].map((_, index) => (
-          <FaStar key={index} className="text-yellow-400 text-lg" />
+          <FaStar key={index} className="text-yellow-300 text-lg" />
            ))}
            </div>
 
@@ -96,11 +96,11 @@ import camiloPic from '../assets/profile-pictures/testimonio1.png'
 
                         <p className="mt-4 text-center"> Encontrar empleo puede ser complicado, pero con esta plataforma ha sido mucho más fácil y rápido. Me ha permitido acceder a ofertas de calidad y conectar con empresas serias. ¡Estoy muy satisfecho con mi experiencia! </p>
                     </div>
-                    <div className="p-6 rounded shadow-md bg-blue-200/30">
+                    <div className="p-6 rounded shadow-md bg-blue-200">
         <img src={stevenPic} alt="" className="w-20 h-20   mx-auto object-cover   rounded-full dark:bg-gray-500" />
             <div className="flex justify-center mt-4">
              {[...Array(5)].map((_, index) => (
-          <FaStar key={index} className="text-yellow-400 text-lg" />
+          <FaStar key={index} className="text-yellow-300 text-lg" />
            ))}
            </div>
 
@@ -135,7 +135,7 @@ import camiloPic from '../assets/profile-pictures/testimonio1.png'
           animate={mainControlls}
           transition={{ duration: 0.5, delay: 0.25 }}
 
-        className="max-w-2xl mx-auto rounded shadow-md bg-blue-100/20 p-6 my-8 space-y-4 text-center xl:col-span-2 xl:text-left"
+        className="max-w-2xl mx-auto rounded shadow-md bg-blue-50 p-6 my-8 space-y-4 text-center xl:col-span-2 xl:text-left"
         >
             <h2 className="text-4xl font-bold text-black">Lo que opinan de nosotros</h2>
             <p className="dark:text-gray-600">Aqui hay algunos testimonios de los clientes que nos conocen</p>
@@ -153,12 +153,12 @@ import camiloPic from '../assets/profile-pictures/testimonio1.png'
                      animate={mainControlls}
                      transition={{ duration: 0.6, delay: 0.15 }}
                     
-                    className="p-6 rounded shadow-md bg-blue-200/30 ">
+                    className="p-6 rounded shadow-md bg-blue-200 ">
 
                  <img src={camiloPic} alt="" className="w-20 h-20  mx-auto object-cover   rounded-full dark:bg-gray-500" />
                 <div className="flex justify-center mt-4">
                   {[...Array(5)].map((_, index) => (
-                <FaStar key={index} className="text-yellow-400 text-lg" />
+                <FaStar key={index} className="text-yellow-300 text-lg" />
                  ))}
                      </div>
 
@@ -184,11 +184,11 @@ import camiloPic from '../assets/profile-pictures/testimonio1.png'
                        initial="hidden"
                        animate={mainControlls}
                        transition={{ duration: 0.6, delay: 0.35 }}
-                    className="p-6 rounded shadow-md bg-blue-200/60">
+                    className="p-6 rounded shadow-md bg-blue-100/80">
         <img src={melisaPic} alt="" className="w-20 h-20   mx-auto object-cover   rounded-full dark:bg-gray-500" />
             <div className="flex justify-center mt-4">
              {[...Array(5)].map((_, index) => (
-          <FaStar key={index} className="text-yellow-400 text-lg" />
+          <FaStar key={index} className="text-yellow-300 text-lg" />
            ))}
            </div>
 
@@ -213,11 +213,11 @@ import camiloPic from '../assets/profile-pictures/testimonio1.png'
                       initial="hidden"
                       animate={mainControlls}
                       transition={{ duration: 0.7, delay: 0.55 }}
-                    className="p-6 rounded shadow-md bg-blue-200/60">
+                    className="p-6 rounded shadow-md bg-blue-100/80">
         <img src={sandraPic} alt="" className="w-20 h-20   mx-auto object-cover   rounded-full dark:bg-gray-500" />
             <div className="flex justify-center mt-4">
              {[...Array(5)].map((_, index) => (
-          <FaStar key={index} className="text-yellow-400 text-lg" />
+          <FaStar key={index} className="text-yellow-300 text-lg" />
            ))}
            </div>
 
@@ -242,11 +242,11 @@ import camiloPic from '../assets/profile-pictures/testimonio1.png'
                       animate={mainControlls}
                       transition={{ duration: 0.8, delay: 0.75 }}
 
-                    className="p-6 rounded shadow-md bg-blue-200/30">
+                    className="p-6 rounded shadow-md bg-blue-200">
         <img src={stevenPic} alt="" className="w-20 h-20   mx-auto object-cover   rounded-full dark:bg-gray-500" />
             <div className="flex justify-center mt-4">
              {[...Array(5)].map((_, index) => (
-          <FaStar key={index} className="text-yellow-400 text-lg" />
+          <FaStar key={index} className="text-yellow-300 text-lg" />
            ))}
            </div>
 

@@ -2,6 +2,7 @@ import {Menu, X} from "lucide-react";
 import { useState } from "react";
 import logo from "../assets/logo.jpg";
 import { navItems } from "../constants/info";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
    const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
@@ -21,7 +22,7 @@ const Navbar = () => {
             <ul className="hidden lg:flex ml-3 xl:space-x-9 lg:space-x-5">
                 {navItems.map((item , index ) => (
                   <li key={index}>
-                    <a className="lg:text-sm  xl:text-base font-semibold text-white drop-shadow-lg" href={item.href}>{item.label}</a>
+                    <Link className="lg:text-sm  xl:text-base font-semibold text-white drop-shadow-lg" to={item.href}>{item.label}</Link>
                   </li>
                 ))}
             </ul>

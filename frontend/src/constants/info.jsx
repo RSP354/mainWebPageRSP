@@ -1,9 +1,9 @@
 {/*  Barra de navegacion */ }
 export const navItems = [
-    { label: "Inicio", href: "#" },
-    { label: "Servicios", href: "#" },
-    { label: "Nosotros", href: "#" },
-    { label: "Contactanos", href: "#" },
+    { label: "Inicio", href: "/" },
+    { label: "Servicios", href: "/serviciosRsp" },
+    { label: "Nosotros", href: "/nosotros" },
+    { label: "Contactanos", href: "/contactanos" },
   ];
 
 

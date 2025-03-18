@@ -9,6 +9,7 @@ import { FaFacebookF } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa6";
 
 
+import { Link } from "react-router-dom";
 
 
 
@@ -19,12 +20,12 @@ const FooterRsp = () => {
 	<div className="container px-6 mx-auto space-y-6 divide-y divide-gray-400 md:space-y-12 divide-opacity-50">
 		<div className="grid grid-cols-12  space-y-10 md:space-y-0">
 			<div className="pb-6 col-span-full md:pb-0 md:col-span-6">
-				<a rel="noopener noreferrer" href="#" className="flex justify-center space-x-3 md:justify-start">
+				<Link to="/nosotros" className="flex justify-center space-x-3 md:justify-start">
 					<div className="flex items-center justify-center w-14 h-12 ">
 						<img src={logoRsp} alt="" className="  rounded-full border  border-green-200/40 shadow-2xl shadow-green-700" />
 					</div>
 					<span className="self-center text-2xl font-semibold">RSP | Selección de Personal</span>
-				</a>
+				</Link>
 
                    <div className="pt-20  md:pt-14 pl-5 space-y-3">
                      <div className="flex items-center gap-3">
@@ -66,13 +67,13 @@ const FooterRsp = () => {
 				<p className="pb-1 text-lg font-medium">Recursos</p>
 				<ul className="mt-1">
 					<li>
-						<a rel="noopener noreferrer" href="#" className="hover:text-emerald-600">Nosotros</a>
+						<Link to="/nosotros" className="hover:text-emerald-600">Nosotros</Link>
 					</li>
 					<li>
-						<a rel="noopener noreferrer" href="#" className="hover:text-emerald-600">Contacto</a>
+						<Link to="/contactanos" className="hover:text-emerald-600">Contacto</Link>
 					</li>
 					<li>
-						<a rel="noopener noreferrer" href="#" className="hover:text-emerald-600">Servicios</a>
+						<Link to="/serviciosRsp" className="hover:text-emerald-600">Servicios</Link>
 					</li>
 					<li>
 						<a rel="noopener noreferrer" href="https://linktr.ee/empleosrsp" target="_blank" className="hover:text-emerald-600">Grupos</a>

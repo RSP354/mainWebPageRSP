@@ -27,6 +27,7 @@ import { FiSend } from "react-icons/fi";
 
 const Home = () => {
 
+
    {/* Funcionamiento del carrusel */}
   const [current, setCurrent] = useState(0);
   const prevSlide = () => setCurrent((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
@@ -55,6 +56,8 @@ const Home = () => {
 
   return (
     <>
+
+ <div className='pt-20 px-6 '> 
 
     {/*----------------------- Carrousel -----------------------*/}
 
@@ -352,7 +355,7 @@ const Home = () => {
 
 
 
-
+        </div>
      </>
   );
 };

@@ -17,7 +17,7 @@ const Navbar = () => {
             <div className="flex justify-between items-center">
             <div className="flex items-center flex-shrink-0">
                 <img className="h-14 w-14 mr-2" src={logo} alt="logo" />
-                <span className="text-xs sm:text-sm md:text-base  lg:text-base  xl:text-lg tracking-tight font-medium text-white  drop-shadow-lg">RSP (Reclutamiento y Seleccion de Personal)</span>
+                <span className="text-xs sm:text-sm md:text-base  lg:text-base   xl:text-lg tracking-tight  font-medium text-white  drop-shadow-lg">RSP (Reclutamiento y Seleccion de Personal)</span>
             </div>
             <ul className="hidden lg:flex ml-3 xl:space-x-9 lg:space-x-5">
                 {navItems.map((item , index ) => (
@@ -37,7 +37,7 @@ const Navbar = () => {
             </div>
              <div className="lg:hidden md:flex flex-col justify-end">
                 <button onClick={toggleNavbar}>
-                   {mobileDrawerOpen ? <X /> : <Menu />}
+                   {mobileDrawerOpen ? <X /> : <Menu  />}
                 </button>
              </div>
             </div>

@@ -106,3 +106,40 @@ export const FAQS = [
 
 export const FAQ_DESCRIPTION =
   "Explore respuestas rápidas a dudas o preguntas sobre RSP en nuestra sección de ayuda. Ya sea sobre nuestros servicios, políticas o más, encuentre la información que necesita. ¿Necesita más ayuda? ¡Comuníquese con nuestro servicio de atención al cliente para obtener asistencia personalizada!";
+
+
+    {/* Informacion del los precios de RSP en seccion servicios */}
+
+
+  export const pricingOptions = [
+    {
+      title: "Standard",
+      price: "$550.000",
+      features: [
+        "Private board sharing",
+        "5 Gb Storage",
+        "Web Analytics",
+        "Private Mode",
+      ],
+    },
+    {
+      title: "Plus",
+      price: "$800.000",
+      features: [
+        "Private board sharing",
+        "10 Gb Storage",
+        "Web Analytics (Advance)",
+        "Private Mode",
+      ],
+    },
+    {
+      title: "Premium",
+      price: "$1.100.000",
+      features: [
+        "Private board sharing",
+        "Unlimited Storage",
+        "High Performance Network",
+        "Private Mode",
+      ],
+    },
+  ];

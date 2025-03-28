@@ -132,42 +132,43 @@ const Servicios = () => {
    
  {/* -------------- Seccion precios y servicios RSP -------------- */}
     
-     <div className="mt-24 md:mt-32  lg:mt-40 px-6  mx-auto max-w-7xl">
+     <div className="mt-24 md:mt-32  lg:mt-40 px-6  mx-auto max-w-7xl  ">
         <h2 className="text-3xl sm:text-5xl lg:text-6xl text-center my-8
         tracking-wider text-white drop-shadow-md">
           Nuestros Planes
           </h2>
-            <p className='text-center my-10 tracking-wider xl:text-lg text-gray-950 font-semibold'> Ofrecemos tres niveles de servicio adaptados a tus
+            <p className='text-center my-10 tracking-wider xl:text-lg text-gray-950 font-bold drop-shadow-xl text-shadowCT '> Ofrecemos tres niveles de servicio adaptados a tus
             necesidades y presupuesto</p>
 
-          <div className="flex flex-wrap mt-16 ">
+          <div className="flex flex-wrap mt-16  ">
           {pricingOptions.map((option, index) => (
            <div key={index} className="w-full sm:w-1/2 lg:w-1/3 p-2">
-              <div className={`p-10 border border-neutral-700 rounded-xl  ${option.title === 'Plus' ? 'bg-yellow-300 text-black' : 'bg-white'}`}>
+              <div className={`p-10 border border-neutral-700 rounded-xl  ${option.title === 'Plus' ? 'bg-yellow-200' : 'bg-white'}`}>
                  <p className="text-4xl mb-8 ">
                   {option.title}
                    {option.title === "Plus"  && (<span className="bg-gradient-to-r
-                    from-indigo-500 to-indigo-400 text-transparent drop-shadow-2xl bg-clip-text text-xl
+                    from-indigo-500 to-indigo-400 text-transparent font-semibold bg-clip-text text-lg sm:text-sm  md:text-lg
                    mb-4 ml-2">
                     (Mas Vendido)
                     </span>
                     )}
                 </p>
                 <p className="mb-8">
-                   <span className="text-5xl mt-6 mr-2">{option.price}</span>
-                    <span className="text-neutral-600 tracking-tight ">COP</span>
+                   <span className="text-5xl mt-6 mr-1">{option.price}</span>
+                    <span className="hidden md:inline text-neutral-600 tracking-tight text-sm xl:text-base">COP</span>
                 </p>
+                   <p className='font-medium border-b-2 border-b-gray-400 '> Incluye {option.title === "Plus" ? "Standard, más" : option.title === "Premium" ? "Plus, más" : ""}:</p>
                 <ul>
                   {option.features.map((feature, index) => (
-                    <li key={index} className="mt-8 flex items-center">
-                       <CheckCircle2 />
-                       <span className="ml-2">{feature}</span>
+                    <li key={index} className={` ${option.title === 'Premium' ? 'mt-5' :  option.title === 'Plus' ? 'mt-10 lg:mt-12 xl:mt-10' : 'mt-9'}  flex items-center`}>
+                       <CheckCircle2  fill='green'  stroke='white'/>
+                       <span className={`ml-2 ${option.title === 'Premium' ? 'text-sm' : 'text-base'} `} >{feature}</span>
                     </li>
                   ))}
                 </ul>
-                <a href="#" className="inline-flex justify-center items-center text-center w-full h-12 p-5 mt-20 traciking-tight text-xl hover:bg-orange-900 
-                border border-orange-900 rounded-lg transition duration-200">
-                  Contratar ahora
+                <a href="#" className={`inline-flex justify-center items-center text-center w-full h-12 p-5 ${option.title === 'Premium' ? 'mt-10' : 'mt-20'} traciking-tight text-xl 
+                border border-orange-900 rounded-lg  ${option.title === 'Plus' ? 'bg-white  hover:bg-green-300 ' : ' bg-green-300 hover:bg-white '}  transition duration-200`}>
+                  Contratar
                   </a>
             </div>
             </div>

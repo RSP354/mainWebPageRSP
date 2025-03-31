@@ -114,7 +114,6 @@ export const FAQ_DESCRIPTION =
   export const pricingOptions = [
     {
       title: "Standard",
-      price: "$550.000",
       features: [
         "Publicacion vacante en ATS",
         "Filtrado inicial según el perfil",
@@ -124,7 +123,6 @@ export const FAQ_DESCRIPTION =
     },
     {
       title: "Plus",
-      price: "$800.000",
       features: [
         "2 pruebas psicotécnicas",
         "Evaluación con entrevistas y análisis clínico",
@@ -133,7 +131,6 @@ export const FAQ_DESCRIPTION =
     },
     {
       title: "Premium",
-      price: "$1.100.000",
       features: [
         "Assessment center de desempeño",
         "Seguimiento post-contratación el 1 mes",

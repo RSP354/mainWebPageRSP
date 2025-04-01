@@ -175,7 +175,7 @@ const Servicios = () => {
    
      {/* --------------  Servicios Adicionales ------------ */}
      
-     <div className="flex flex-col items-start min-h-screen px-8 bg-[#0a0f2d] py-24 mt-40">
+     <div className="flex flex-col items-start min-h-screen px-8 bg-[#0a0f2d] py-24 mt-60">
   <div className="max-w-lg text-left text-white">
     <h2 className="text-3xl font-bold mt-2">
       SERVICIOS ADICIONALES PARA TU EMPRESA
@@ -190,14 +190,17 @@ const Servicios = () => {
     <div className="max-w-lg mx-auto rounded-lg shadow-lg overflow-hidden lg:max-w-none lg:flex">
       <div className="flex-1 px-6 py-8 lg:p-12 bg-gray-600">
         <h3 className="text-2xl font-extrabold text-white sm:text-3xl">
-          Plan esmeralda
+          Plan Ultimate
         </h3>
         <p className="mt-6 text-base text-gray-50 sm:text-lg">
-        Un servicio integral que fusiona Capacitaciones y Desarrollo  con Acompañamiento en Salud Mental en una organizacion. Este plan impulsa la dirección estratégica y el desempeño del equipo mediante programas formativos personalizados, mientras que el apoyo psicológico y talleres especializados fomentan un entorno laboral equilibrado y resiliente.
+        Un servicio integral que fusiona Capacitaciones y Desarrollo con Acompañamiento en Salud Mental en una organización. Este plan potencia la dirección estratégica y el desempeño del equipo con programas formativos personalizados y apoyo psicológico, generando un entorno laboral equilibrado y resiliente.
         </p>
         <div className="mt-8">
           <div className="flex items-center">
-            <div className="flex-1 border-t-2 border-gray-200"></div>
+             
+            <div className="flex-1 border-b-2 border-gray-200">
+              <p className='text-white font-bold'>Incluye talleres de:</p>
+              </div>
           </div>
           <ul role="list" className="mt-8 space-y-5 lg:space-y-0 lg:grid lg:grid-cols-2 lg:gap-x-8 lg:gap-y-5">
             <li className="flex items-start lg:col-span-1">
@@ -206,7 +209,7 @@ const Servicios = () => {
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
                 </svg>
               </div>
-              <p className="ml-3 text-white">Inspect Tailwind CSS websites</p>
+              <p className="ml-3 text-white">Liderazgo Humanizado y estratégico</p>
             </li>
             <li className="flex items-start lg:col-span-1">
               <div className="flex-shrink-0">
@@ -214,7 +217,7 @@ const Servicios = () => {
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
                 </svg>
               </div>
-              <p className="ml-3 text-white">Edit mode in real-time</p>
+              <p className="ml-3 text-white">Comunicación afectiva  y efectiva</p>
             </li>
             <li className="flex items-start lg:col-span-1">
               <div className="flex-shrink-0">
@@ -222,7 +225,7 @@ const Servicios = () => {
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
                 </svg>
               </div>
-              <p className="ml-3 text-white">Copy utility classes right into your clipboard</p>
+              <p className="ml-3 text-white">Trabajo en equipo y resolución de conflictos</p>
             </li>
             <li className="flex items-start lg:col-span-1">
               <div className="flex-shrink-0">
@@ -230,39 +233,66 @@ const Servicios = () => {
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
                 </svg>
               </div>
-              <p className="ml-3 text-white">Free Chrome extension updates (Firefox coming soon)</p>
+              <p className="ml-3 text-white">Planes de Carrera y Sucesión</p>
+            </li>
+            <li className="flex items-start lg:col-span-1">
+              <div className="flex-shrink-0">
+                <svg className="h-5 w-5 text-green-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
+                </svg>
+              </div>
+              <p className="ml-3 text-white">Espacios de escucha psicológica para empleados</p>
+            </li>
+            <li className="flex items-start lg:col-span-1">
+              <div className="flex-shrink-0">
+                <svg className="h-5 w-5 text-green-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
+                </svg>
+              </div>
+              <p className="ml-3 text-white">Talleres de gestión del estrés y regulación emocional</p>
+            </li>
+            <li className="flex items-start lg:col-span-1">
+              <div className="flex-shrink-0">
+                <svg className="h-5 w-5 text-green-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
+                </svg>
+              </div>
+              <p className="ml-3 text-white">Desarrollo de Habilidades Blandas</p>
+            </li>
+            <li className="flex items-start lg:col-span-1">
+              <div className="flex-shrink-0">
+                <svg className="h-5 w-5 text-green-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
+                </svg>
+              </div>
+              <p className="ml-3 text-white">Plan de bienestar laboral que reduce rotación y
+              mejorar clima organizacional</p>
             </li>
           </ul>
         </div>
       </div>
       <div className="py-8 px-6 text-center lg:flex-shrink-0 lg:flex lg:flex-col lg:justify-center lg:p-12 bg-gray-700">
-        <p className="text-lg leading-6 font-medium text-white">
-          Pay once, own it forever
+        <p className="text-md leading-6 font-medium text-white ">
+         Un Solo Pago, Beneficios Ilimitados
         </p>
-        <div className="mt-4 flex items-center justify-center text-5xl font-extrabold text-white">
-          <span>$19.99</span>
-          <span className="ml-3 text-xl font-medium text-gray-50">USD</span>
-        </div>
+      
         <div className="mt-6">
           <div className="rounded-md shadow">
             <a href="#" className="flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-500 hover:bg-indigo-600">
-              Buy now
+              Contratar
             </a>
           </div>
           <p className="text-gray-300 text-sm mt-3">
-            100% money back guarantee
+            100% garantizado
           </p>
         </div>
       </div>
     </div>
   </div>
-
-
-  
-
-
-
 </div>
+
+
+
 
 
 

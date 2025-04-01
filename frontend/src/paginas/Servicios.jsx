@@ -11,8 +11,9 @@ import seguimiento from "../assets/seguimientoValor.png"
  import { pricingOptions } from "../constants/info";
 
 
-
-
+   {/* dudas service faq material */}
+ import { FaQuestionCircle } from 'react-icons/fa';
+ import serviceFAQ from '../assets/faqservice.png';
 
 
 const Servicios = () => {
@@ -291,10 +292,89 @@ const Servicios = () => {
   </div>
 </div>
 
+     {/* -----------Seccion FAQ en Servicios RSP ----------------- */}
 
+     <div className="max-w-6xl mx-auto px-5 py-10 mt-36 ">
+      {/* Título  */}
+      <h1 className="text-center text-2xl md:text-3xl font-bold drop-shadow-lg mb-10 text-white ">
+        ¿SU EMPRESA ENFRENTA ESTOS DESAFÍOS?
+      </h1>
 
+      {/* Contenedor principal */}
 
+      <div className="min-h-[600px] flex flex-col md:flex-row items-stretch gap-14 mt-32">
+        
+        {/* Columna izquierda: Imagen   */}
+        <div className="w-full md:w-1/2 flex">
+          <img
+            src={serviceFAQ}
+            alt="Imagen descriptiva"
+            className="w-full h-full object-cover object-center rounded-2xl shadow-2xl shadow-gray-800"
+          />
+        </div>
 
+        {/* Columna derecha: Preguntas */}
+        <div className="w-full md:w-1/2 flex flex-col justify-center mt-8 md:mt-0">
+        
+          {/* Pregunta 1 */}
+          <div className="flex items-start mb-6">
+            <FaQuestionCircle className="text-4xl mr-3 flex-shrink-0" fill='white' />
+            <div>
+              <strong className="block text-lg text-yellow-50 font-bold drop-shadow-lg">
+                ¿Su empresa tiene alta rotación de personal y altos costos por reemplazos?
+              </strong>
+              <p className="mt-1 text-sm text-gray-600/75 font-medium drop-shadow-sm">
+                Implementar estrategias de retención y programas de incentivos.
+              </p>
+            </div>
+          </div>
+
+          {/* Pregunta 2 */}
+          <div className="flex items-start mb-6">
+            <FaQuestionCircle className="text-4xl mr-3 flex-shrink-0"   fill='white'/>
+            <div>
+              <strong className="block text-lg text-yellow-50 font-bold drop-shadow-lg">
+                ¿Invierten en capacitación, pero no ven resultados?
+              </strong>
+              <p className="mt-1 text-sm text-gray-600/75 font-medium drop-shadow-sm">
+                Optimizar métodos de formación y seguimiento del rendimiento.
+              </p>
+            </div>
+          </div>
+
+          {/* Pregunta 3 */}
+          <div className="flex items-start mb-6">
+            <FaQuestionCircle className="text-4xl mr-3 flex-shrink-0"  fill='white'/>
+            <div>
+              <strong className="block text-lg text-yellow-50 font-bold drop-shadow-lg">
+                ¿Se les dificulta encontrar talento que encaje con la cultura organizacional?
+              </strong>
+              <p className="mt-1 text-sm text-gray-600/75 font-medium drop-shadow-sm">
+                Revisar procesos de selección y ajustar estrategias de reclutamiento.
+              </p>
+            </div>
+          </div>
+
+          {/* Pregunta 4 */}
+          <div className="flex items-start mb-6">
+            <FaQuestionCircle className="text-4xl mr-3 flex-shrink-0" fill='white' />
+            <div>
+              <strong className="block text-lg text-yellow-50 font-bold drop-shadow-lg">
+                ¿Su equipo de trabajo está desmotivado y afecta la productividad de la empresa?
+              </strong>
+              <p className="mt-1 text-sm text-gray-600/75 font-medium drop-shadow-sm">
+                Implementar programas de motivación y mejorar la comunicación interna.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Letreo a la derecha */}
+      <div className="text-right mt-5">
+        <strong className="text-xl text-white font-bold drop-shadow-lg">¡Nosotros podemos apoyarlos!</strong>
+      </div>
+    </div>
 
    </>
   )

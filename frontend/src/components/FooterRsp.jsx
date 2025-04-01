@@ -16,7 +16,7 @@ import { Link } from "react-router-dom";
 
 const FooterRsp = () => {
   return (
-    <footer className="py-6 bg-gray-100 text-gray-900 mt-52">
+    <footer className="py-6 bg-gray-100 text-gray-900 mt-48">
 	<div className="container px-6 mx-auto space-y-6 divide-y divide-gray-400 md:space-y-12 divide-opacity-50">
 		<div className="grid grid-cols-12  space-y-10 md:space-y-0">
 			<div className="pb-6 col-span-full md:pb-0 md:col-span-6">

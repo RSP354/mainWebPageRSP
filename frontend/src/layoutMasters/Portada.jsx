@@ -9,7 +9,7 @@ const Portada = () => {
      <Navbar />
       
      <Outlet />
-          
+     
      <FooterCT />
     </>
   )

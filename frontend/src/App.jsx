@@ -7,6 +7,8 @@ import Nosotros from './paginas/Nosotros';
 import Contactanos from './paginas/Contactanos';
 
 
+import Propuesta from  './paginas/Propuesta';
+import TYC from './paginas/TYC';
 
 
 const App = () => {
@@ -18,9 +20,13 @@ const App = () => {
               <Route path='/serviciosRsp' element={<Servicios />} />
               <Route path='/nosotros' element={<Nosotros />} />
               <Route path='/contactanos' element={<Contactanos />} />
+
+              <Route path='/propuesta' element={<Propuesta />} />
+              <Route path='/terminosRsp' element={<TYC />} />
+
          </Route>
 
-
+           
 
 
       </Routes>

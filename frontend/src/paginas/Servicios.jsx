@@ -6,6 +6,8 @@ import experiencia from "../assets/experienciaValor.png"
 import calidad from "../assets/calidadValor.jpg"
 import seguimiento from "../assets/seguimientoValor.png"
 
+import { useNavigate } from 'react-router-dom';
+
 {/* precios imports */ }
  import { CheckCircle2 } from "lucide-react";
  import { pricingOptions } from "../constants/info";
@@ -17,6 +19,14 @@ import seguimiento from "../assets/seguimientoValor.png"
 
 
 const Servicios = () => {
+
+  const navigateCT = useNavigate();
+
+  const propuestaClick = () => {
+    navigateCT('/propuesta');
+  };
+
+
   return (
    <>
    
@@ -37,11 +47,13 @@ const Servicios = () => {
             Contáctanos
             <FaHandshake  className='w-6 h-6 '/>
           </button>
+         
           
-          <button className="flex w-full items-center justify-center gap-2 rounded-2xl bg-white p-5 py-3 font-semibold">
+          <button onClick={propuestaClick} className="flex w-full items-center justify-center gap-2 rounded-2xl bg-white p-5 py-3 font-semibold">
              Nuestro Proceso
              <IoList  className='w-9 h-9  xl:w-6 xl:h-6'/>
           </button>
+          
         </div>
       </div>
 

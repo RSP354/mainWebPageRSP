@@ -16,7 +16,7 @@ const Propuesta = () => {
 			
 		</div>
 		<div className="flex items-center justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
-			<img src={propuestaPic} alt="" className="object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128 rounded-3xl shadow-2xl shadow-indigo-300" />
+			<img src={propuestaPic} alt="" className="object-cover object-center h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128 rounded-3xl shadow-xl shadow-indigo-300" />
 		</div>
 	</div>
 </div>

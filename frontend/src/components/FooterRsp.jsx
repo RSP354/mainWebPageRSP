@@ -97,7 +97,7 @@ const FooterRsp = () => {
 		<div className="grid justify-center pt-6 lg:justify-between">
 			<div className="flex flex-col self-center text-sm text-center md:block lg:col-start-1 md:space-x-6">
 				<span>©2025 Todos los derechos reservados</span>
-				<a rel="noopener noreferrer" href="#">
+				<a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1PUdI4E5XqoYPQjstoAahJP4i4nOSsh5k/view?usp=sharing">
 					<span>Politica de Privacidad</span>
 				</a>
 				<Link to="terminosRsp">

@@ -43,7 +43,9 @@ const Servicios = () => {
         <h1 className="mb-2 text-3xl md:text-xl lg:text-2xl  xl:text-3xl font-bold   text-white">Impulsa tu equipo con un <span className="text-green-500">Profesional</span> {" "} en Gestión Humana de alto nivel!</h1>
         <p className="mb-6 text-white tracking-tighter mt-5  text-base  md:text-sm lg:text-base xl:text-lg"> En RSP, facilitamos la búsqueda y selección del talento ideal para tu empresa. A través de un Especialista en Gestión Humana, ofrecemos un servicio estratégico para identificar y atraer a los mejores candidatos, asegurando que cada puesto clave sea ocupado por profesionales altamente capacitados. Con un enfoque alineado a la cultura y necesidades de tu organización, garantizamos procesos de reclutamiento eficientes que impulsan el crecimiento y el éxito de tu equipo. </p>
         <div className="flex justify-center space-x-5">
-          <button className="flex w-full items-center justify-center gap-2 rounded-2xl bg-rose-500 p-5 py-3 font-semibold text-white hover:bg-rose-700">
+          <button className="flex w-full items-center justify-center gap-2 rounded-2xl bg-rose-500 p-5 py-3 font-semibold text-white hover:bg-rose-700"
+              onClick={() => window.open("https://wa.me/573002359289?text=Hola,%20quiero%20saber%20más%20de%20los%20servicios%20de%20RSP", "_blank")}
+             >
             Contáctanos
             <FaHandshake  className='w-6 h-6 '/>
           </button>

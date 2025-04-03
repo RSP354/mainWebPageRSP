@@ -100,9 +100,9 @@ const FooterRsp = () => {
 				<a rel="noopener noreferrer" href="#">
 					<span>Politica de Privacidad</span>
 				</a>
-				<a rel="noopener noreferrer" href="#">
+				<Link to="terminosRsp">
 					<span>Terminos del Servicio</span>
-				</a>
+				</Link>
 			</div>
 			<div className="flex justify-center pt-4 space-x-4 lg:pt-0 lg:col-end-13">
 			  <a rel="noopener noreferrer" href="https://www.linkedin.com/in/rsp-reclutamiento-y-selecci%C3%B3n-de-personal-7970052a7/" title="LinkedIn" target="_blank" className="flex items-center justify-center w-10 h-10 rounded-full bg-emerald-600 text-gray-50">

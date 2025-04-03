@@ -44,7 +44,7 @@ const Servicios = () => {
         <p className="mb-6 text-white tracking-tighter mt-5  text-base  md:text-sm lg:text-base xl:text-lg"> En RSP, facilitamos la búsqueda y selección del talento ideal para tu empresa. A través de un Especialista en Gestión Humana, ofrecemos un servicio estratégico para identificar y atraer a los mejores candidatos, asegurando que cada puesto clave sea ocupado por profesionales altamente capacitados. Con un enfoque alineado a la cultura y necesidades de tu organización, garantizamos procesos de reclutamiento eficientes que impulsan el crecimiento y el éxito de tu equipo. </p>
         <div className="flex justify-center space-x-5">
           <button className="flex w-full items-center justify-center gap-2 rounded-2xl bg-rose-500 p-5 py-3 font-semibold text-white hover:bg-rose-700"
-              onClick={() => window.open("https://wa.me/573002359289?text=Hola,%20quiero%20saber%20más%20de%20los%20servicios%20de%20RSP", "_blank")}
+              onClick={() => window.open("https://wa.me/573216143596?text=Hola,%20quiero%20saber%20más%20de%20los%20servicios%20de%20RSP", "_blank")}
              >
             Contáctanos
             <FaHandshake  className='w-6 h-6 '/>
@@ -178,7 +178,19 @@ const Servicios = () => {
                     </li>
                   ))}
                 </ul>
-                <a href="#" className={`inline-flex justify-center items-center text-center w-full h-12 p-5 ${option.title === 'Premium' ? 'mt-10' : 'mt-20'} traciking-tight text-xl 
+                <a href={
+                     option.title === 'Standard'
+                     ? `https://wa.me/573216143596?text=${encodeURIComponent('Hola, me interesó el plan Standard. Quisiera más información.')}`
+                     : option.title === 'Plus'
+                     ? `https://wa.me/573216143596?text=${encodeURIComponent('Hola, me interesó el plan Plus. Quisiera más información.')}`
+                     : option.title === 'Premium'
+                     ? `https://wa.me/573216143596?text=${encodeURIComponent('Hola, me interesó el plan Premium. Quisiera más información.')}`
+                     : '#'
+                     }
+                     target="_blank"
+                     rel="noopener noreferrer"
+                
+                className={`inline-flex justify-center items-center text-center w-full h-12 p-5 ${option.title === 'Premium' ? 'mt-10' : 'mt-20'} traciking-tight text-xl 
                 border border-orange-900 rounded-lg  ${option.title === 'Plus' ? 'bg-white  hover:bg-green-300 ' : ' bg-green-300 hover:bg-white '}  transition duration-200`}>
                   Contratar
                   </a>
@@ -293,7 +305,10 @@ const Servicios = () => {
       
         <div className="mt-6">
           <div className="rounded-md shadow">
-            <a href="#" className="flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-500 hover:bg-indigo-600">
+            <a href={`https://wa.me/573216143596?text=${encodeURIComponent('Hola, me interesó el plan Ultimate. Quisiera más información.')}`}
+               target="_blank"
+               rel="noopener noreferrer"
+             className="flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-500 hover:bg-indigo-600">
               Contratar
             </a>
           </div>

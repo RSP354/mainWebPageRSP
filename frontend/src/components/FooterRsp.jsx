@@ -40,11 +40,16 @@ const FooterRsp = () => {
 
                      <div className="flex items-center gap-3">
                         <div className="flex items-center justify-center w-11 h-11 bg-green-600 rounded-full">
-                        <BsWhatsapp  className="h-7 w-6" fill="white"/>
+                       <a href={`https://wa.me/573216143596?text=${encodeURIComponent('Hola, quisiera más información.')}`}
+            			 target="_blank"
+              			 rel="noopener noreferrer">
+					   <BsWhatsapp  className="h-7 w-6" fill="white"/>
+					   </a>
+					    
 						</div>
                      
                      <h1>
-                      <span className="font-semibold"> Teléfono:</span> 3008031702 - 3216143596 
+                     <span className="font-semibold"> Teléfono:</span> 3008031702 - 3216143596 
                       </h1> 
                      </div>
 

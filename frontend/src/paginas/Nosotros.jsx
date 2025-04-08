@@ -2,6 +2,7 @@ import nosotrosHero from '../assets/nosotrosHero.png'
 import aboutVideo from "../assets/aboutusVideo.mp4";
 import { useRef } from "react";
 import {motion} from "framer-motion";
+import { TbTargetArrow } from "react-icons/tb";
 
 
 
@@ -34,6 +35,7 @@ const Nosotros = () => {
     </div>
 
 
+             {/* ------------ Seccion de nosotros con video -------------- */ }
      <div>
         <h2 className='text-center  text-3xl  sm:text-5xl text-white font-semibold drop-shadow-lg
          mt-40 '> Nuestra Historia</h2>
@@ -148,15 +150,105 @@ const Nosotros = () => {
       </p>
     </div>
   </div>
-                       
+    </div>
+    </div>
+    </div>
 
+      {/* ------------ SECCION DE OBJETIVOS --------------- */}
 
-                  </div>
-                  
-               </div>
-                 
-
+      <div className="bg-gray-700 p-4 min-h-screen mt-40">
+  <div aria-hidden="true" className="absolute inset-0 h-max w-full m-auto grid grid-cols-2 -space-x-52 opacity-20">
+    <div className="blur-[106px] h-56 bg-gradient-to-br to-purple-400 from-blue-700"></div>
+    <div className="blur-[106px] h-32 bg-gradient-to-r from-cyan-400 to-indigo-600"></div>
+  </div>
+  <div className="max-w-7xl mx-auto px-6 md:px-12 xl:px-6">
+    <div className="md:w-2/3 lg:w-1/2 mt-12 text-gray-100">
+       <TbTargetArrow className='w-9 h-9' />
+      <h2 className="my-8 text-2xl font-bold text-white md:text-4xl">Nuestros Objetivos</h2>
+      <p className="text-gray-300">Impulsamos logros al unir talentos excepcionales con desafíos de alto impacto</p>
+    </div>
+    <div className="mt-16 grid divide-x divide-y divide-gray-700 overflow-hidden rounded-3xl border text-gray-600 border-gray-700 sm:grid-cols-2 lg:grid-cols-4 lg:divide-y-0 xl:grid-cols-4">
+      <div className="group relative bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
+        <div className="relative space-y-8 py-12 p-8">
+          <img src="https://www.svgrepo.com/show/200008/human-resources-search.svg" loading="lazy" width="200" height="200" className="w-14 h-14 rounded-full" style={{ color: "transparent" }} />
+          <div className="space-y-2">
+            <h5 className="text-xl font-semibold text-white transition group-hover:text-secondary">Selección Precisa</h5>
+            <p className="text-gray-300">Identificamos a los candidatos ideales que maximizan el rendimiento de tu empresa.</p>
           </div>
+        </div>
+      </div>
+      <div className="group relative bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
+        <div className="relative space-y-8 py-12 p-8">
+          <img src="https://www.svgrepo.com/show/213566/finances-pie-chart.svg" loading="lazy" width="200" height="200" className="w-14 h-14 rounded-full" style={{ color: "transparent" }} />
+          <div className="space-y-2">
+            <h5 className="text-xl font-semibold text-white transition group-hover:text-secondary">Ahorro de costos</h5>
+            <p className="text-gray-300">Reducimos hasta un 50% los gastos de contratación al evitar procesos fallidos.</p>
+          </div>
+        </div>
+      </div>
+      <div className="group relative bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
+        <div className="relative space-y-8 py-12 p-8">
+          <img src="https://www.svgrepo.com/show/118511/clock.svg" loading="lazy" width="200" height="200" className="w-14 h-14 rounded-full" style={{ color: "transparent" }} />
+          <div className="space-y-2">
+            <h5 className="text-xl font-semibold text-white transition group-hover:text-secondary">Procesos Eficientes </h5>
+            <p className="text-gray-300 tracking-tight text-sm  xl:text-base">Optimizamos cada etapa del proceso de reclutamiento mediante metodologías ágiles y tecnologías avanzadas, garantizando tiempos de respuesta rápidos.</p>
+          </div>
+        </div>
+      </div>
+      <div className="group relative bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
+        <div className="relative space-y-8 py-12 p-8">
+          <img src="https://www.svgrepo.com/show/65353/strongbox.svg" loading="lazy" width="200" height="200" className="w-14 h-14 rounded-full" style={{ color: "transparent" }} />
+          <div className="space-y-2">
+            <h5 className="text-xl font-semibold text-white transition group-hover:text-secondary">Confidencialidad</h5>
+            <p className="text-gray-300">Procesos discretos para búsquedas estratégicas o reemplazos sensibles, con acuerdos de privacidad.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+     {/* ------------ Seccion de equipos  -------------- */}
+
+  <div className="py-6 bg-gray-100 text-gray-800 mt-20">
+	<div className="container flex flex-col items-center justify-center p-4 mx-auto space-y-8 sm:p-10">
+		<h1 className="text-4xl font-bold leading-none text-center sm:text-5xl">Our team</h1>
+		<p className="max-w-2xl text-center text-gray-600">At a assumenda quas cum earum ut itaque commodi saepe rem aspernatur quam natus quis nihil quod, hic explicabo doloribus magnam neque, exercitationem eius sunt!</p>
+		<div className="flex flex-row flex-wrap-reverse justify-center">
+			<div className="flex flex-col justify-center m-8 text-center">
+				<img alt="" className="self-center flex-shrink-0 w-24 h-24 mb-4 bg-center bg-cover rounded-full bg-gray-500" src="https://source.unsplash.com/100x100/?portrait?0" />
+				<p className="text-xl font-semibold leading-tight">Leroy Jenkins</p>
+				<p className="text-gray-600">Visual Designer</p>
+			</div>
+			<div className="flex flex-col justify-center m-8 text-center">
+				<img alt="" className="self-center flex-shrink-0 w-24 h-24 mb-4 bg-center bg-cover rounded-full bg-gray-500" src="https://source.unsplash.com/100x100/?portrait?1" />
+				<p className="text-xl font-semibold leading-tight">Leroy Jenkins</p>
+				<p className="text-gray-600">Visual Designer</p>
+			</div>
+			<div className="flex flex-col justify-center m-8 text-center">
+				<img alt="" className="self-center flex-shrink-0 w-24 h-24 mb-4 bg-center bg-cover rounded-full bg-gray-500" src="https://source.unsplash.com/100x100/?portrait?2" />
+				<p className="text-xl font-semibold leading-tight">Leroy Jenkins</p>
+				<p className="text-gray-600">Visual Designer</p>
+			</div>
+			<div className="flex flex-col justify-center m-8 text-center">
+				<img alt="" className="self-center flex-shrink-0 w-24 h-24 mb-4 bg-center bg-cover rounded-full bg-gray-500" src="https://source.unsplash.com/100x100/?portrait?3" />
+				<p className="text-xl font-semibold leading-tight">Leroy Jenkins</p>
+				<p className="text-gray-600">Visual Designer</p>
+			</div>
+			<div className="flex flex-col justify-center m-8 text-center">
+				<img alt="" className="self-center flex-shrink-0 w-24 h-24 mb-4 bg-center bg-cover rounded-full bg-gray-500" src="https://source.unsplash.com/100x100/?portrait?4" />
+				<p className="text-xl font-semibold leading-tight">Leroy Jenkins</p>
+				<p className="text-gray-600">Visual Designer</p>
+			</div>
+			<div className="flex flex-col justify-center m-8 text-center">
+				<img alt="" className="self-center flex-shrink-0 w-24 h-24 mb-4 bg-center bg-cover rounded-full bg-gray-500" src="https://source.unsplash.com/100x100/?portrait?5" />
+				<p className="text-xl font-semibold leading-tight">Leroy Jenkins</p>
+				<p className="text-gray-600">Visual Designer</p>
+			</div>
+		</div>
+	</div>
+  </div>
 
 
     

@@ -217,7 +217,7 @@ const Nosotros = () => {
 
      {/* ------------ Seccion de equipos  -------------- */}
 
-  <div className="py-6 bg-green-100 text-gray-800 mt-56 mx-7 rounded-3xl">
+  <div className="py-6 bg-green-200 text-gray-800 mt-56 mx-7 rounded-3xl">
 	<div className="container flex flex-col items-center justify-center p-4 mx-auto space-y-8 sm:p-10">
 		<h1 className="text-4xl font-bold leading-none text-center sm:text-5xl">Nuestro equipo</h1>
 		<p className="max-w-2xl text-center text-gray-600">En RSP reclutamiento y selección de personal, nuestro grupo es el pilar fundamental que impulsa el éxito de cada proyecto y el crecimiento de nuestros clientes. Estamos conformados por un grupo de profesionales apasionados y comprometidos, con amplia experiencia en la identificación y captación de talento.</p>

@@ -24,16 +24,16 @@ const Nosotros = () => {
         className="h-[265px] sm:h-[350px] md:h-[470px]  lg:h-[560px] xl:h-[800px] 2xl:h-screen w-screen
                    bg-cover bg-center  bg-no-repeat 
                    flex items-center text-white
-                   px-5 md:px-14 py-12 md:py-16"
+                  px-6 sm:px-5 md:px-14 py-12 md:py-16"
       >
         {/* Limita el ancho del contenido y centra verticalmente */}
         <div className="max-w-[600px]">
-          <h1 className="text-[9px] sm:text-base md:text-3xl lg:text-4xl xl:text-5xl font-bold drop-shadow-md mb-4 leading-tight text-white">
-          Conectamos Talento  <br className="hidden md:block" />
+          <h1 className="text-sm sm:text-base md:text-3xl lg:text-4xl xl:text-5xl font-bold drop-shadow-md mb-4 leading-tight text-white">
+          Conectamos Talento  <br className="block sm:hidden md:block" />
           y Oportunidades
           </h1>
-          <p className="mb-8   font-medium drop-shadow-lg tracking-tighter text-[6px] sm:text-[10px] md:text-sm lg:text-base xl:text-lg ">
-          Impulsamos el crecimiento de empresas y profesionales <br className="md:block" />
+          <p className="mb-8   font-semibold drop-shadow-lg tracking-tighter text-[11px] sm:text-xs md:text-sm lg:text-base xl:text-lg ">
+          Impulsamos el crecimiento de empresas y profesionales <br className="hidden sm:block" />
            a través de procesos de selección innovadores y personalizados
           </p>
         </div>

@@ -20,7 +20,7 @@ const FooterRsp = () => {
 	<div className="container px-6 mx-auto space-y-6 divide-y divide-gray-400 md:space-y-12 divide-opacity-50">
 		<div className="grid grid-cols-12  space-y-10 md:space-y-0">
 			<div className="pb-6 col-span-full md:pb-0 md:col-span-6">
-				<Link to="/nosotros" className="flex justify-center space-x-3 md:justify-start">
+				<Link to="/nosotros" onClick={() => window.scrollTo(0, 0)} className="flex justify-center space-x-3 md:justify-start">
 					<div className="flex items-center justify-center w-14 h-12 ">
 						<img src={logoRsp} alt="" className="  rounded-full border  border-green-200/40 shadow-2xl shadow-green-700" />
 					</div>
@@ -72,13 +72,13 @@ const FooterRsp = () => {
 				<p className="pb-1 text-lg font-medium">Recursos</p>
 				<ul className="mt-1">
 					<li>
-						<Link to="/nosotros" className="hover:text-emerald-600">Nosotros</Link>
+						<Link to="/nosotros" onClick={() => window.scrollTo(0, 0)}   className="hover:text-emerald-600">Nosotros</Link>
 					</li>
 					<li>
-						<Link to="/contactanos" className="hover:text-emerald-600">Contacto</Link>
+						<Link to="/contactanos" onClick={() => window.scrollTo(0, 0)}   className="hover:text-emerald-600">Contacto</Link>
 					</li>
 					<li>
-						<Link to="/serviciosRsp" className="hover:text-emerald-600">Servicios</Link>
+						<Link to="/serviciosRsp" onClick={() => window.scrollTo(0, 0)} className="hover:text-emerald-600">Servicios</Link>
 					</li>
 					<li>
 						<a rel="noopener noreferrer" href="https://linktr.ee/empleosrsp" target="_blank" className="hover:text-emerald-600">Grupos</a>
@@ -105,7 +105,7 @@ const FooterRsp = () => {
 				<a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1PUdI4E5XqoYPQjstoAahJP4i4nOSsh5k/view?usp=sharing">
 					<span>Politica de Privacidad</span>
 				</a>
-				<Link to="terminosRsp">
+				<Link to="terminosRsp" onClick={() => window.scrollTo(0, 0)}>
 					<span>Terminos del Servicio</span>
 				</Link>
 			</div>

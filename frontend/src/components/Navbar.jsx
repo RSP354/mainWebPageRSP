@@ -22,7 +22,7 @@ const Navbar = () => {
             <ul className="hidden lg:flex ml-3 xl:space-x-9 lg:space-x-5">
                 {navItems.map((item , index ) => (
                   <li key={index}>
-                    <Link className="lg:text-sm  xl:text-base font-semibold text-white drop-shadow-lg" to={item.href}>{item.label}</Link>
+                    <Link className="lg:text-sm  xl:text-base font-semibold text-white drop-shadow-lg" to={item.href} onClick={() => window.scrollTo(0, 0)}>{item.label}</Link>
                   </li>
                 ))}
             </ul>
@@ -46,7 +46,7 @@ const Navbar = () => {
                  <ul>
                    {navItems.map((item, index) => (
                      <li key={index} className="py-4">
-                       <a href={item.href}>{item.label}</a>
+                       <Link to={item.href} onClick={() => window.scrollTo(0, 0)}>{item.label}</Link>
                      </li>
                    ))}
                  </ul>

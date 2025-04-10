@@ -24,6 +24,7 @@ const Servicios = () => {
 
   const propuestaClick = () => {
     navigateCT('/propuesta');
+    window.scrollTo(0, 0); 
   };
 
 

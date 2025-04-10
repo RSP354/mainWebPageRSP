@@ -23,6 +23,8 @@ import { FaMinus, FaPlus } from "react-icons/fa";
 import contactHM from "../assets/profile-pictures/contactsHome.png"
 
 import { FiSend } from "react-icons/fi";
+import { useNavigate } from 'react-router-dom';
+
 
 
 const Home = () => {
@@ -53,11 +55,21 @@ const Home = () => {
          setActiveIndex(activeIndex === index  ? null: index);
        }
 
+       
+       {/* seccion para rederigir a nosotros */ }
+
+       const navigateUS = useNavigate();
+
+      const nosotrosClick = () => {
+        navigateUS('/nosotros');
+        window.scrollTo(0, 0); 
+      };
+
 
   return (
     <>
 
- <div className='pt-20 px-6 '> 
+ <div className='pt-16 px-6 '> 
 
     {/*----------------------- Carrousel -----------------------*/}
 
@@ -198,7 +210,10 @@ const Home = () => {
                   <div className="md:w-3/5 mx-auto">
                        <h2 className="text-4xl text-indigo-50 drop-shadow-md font-semibold mb-4 md:w-4/5 xl:w-full ">Conoce nuestras ofertas laborales mas recientes!</h2>
                        <p className="md:w-3/4 text-sm text-gray-800 mb-8 font-medium">Dirigete al siguiente boton para encontrar lo ultimo en ofertas de RSP!</p>
-                       <button className="bg-green-600 text-white px-5 py-2 mx-auto">Descubre mas</button>
+                       <button  onClick={() => window.open("https://www.facebook.com/empleosmedellin1/",
+                         "_blank",
+                         "noopener,noreferrer")} 
+                        className="bg-green-600 text-white px-5 py-2 mx-auto" >Descubre mas</button>
                   </div>
                </div>
                  
@@ -232,7 +247,7 @@ const Home = () => {
                 nuestros clientes. Para conocer más de nosotros,{' '}
                 <span className="font-semibold">dirígete a :</span>
               </p>
-              <button className="mt-6 px-6 py-2 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 text-lg lg:text-base md:text-sm">
+              <button onClick={nosotrosClick} className="mt-6 px-6 py-2 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 text-lg lg:text-base md:text-sm">
                 Acerca de RSP
               </button>
             </div>

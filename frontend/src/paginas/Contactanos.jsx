@@ -44,7 +44,7 @@ const Contactanos = () => {
       </h3>
       <div>
         <a
-          href=""
+          href="https://docs.google.com/forms/d/e/1FAIpQLScGu-1xgWc9ExntAr8DWrkU_lkD2xBwlSRAMDLZC87MbCk8uA/viewform"
           target="_blank"
           rel="noopener noreferrer"
           className="flex mt-8 w-full items-center justify-center border border-transparent text-base py-3 font-medium rounded-md text-white bg-indigo-500 hover:bg-indigo-600"

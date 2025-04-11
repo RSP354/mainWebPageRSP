@@ -227,7 +227,7 @@ const Home = () => {
         {/* ----------------Seccion de estadisticas RSP ----------------*/}
 
         
-        <div className="flex flex-col md:flex-row items-center justify-between bg-gray-100 p-10 rounded-lg shadow-lg mt-52 md:space-x-20  md:space-y-0">
+        <div className="flex flex-col md:flex-row items-center justify-between bg-gray-100 p-10 rounded-lg shadow-lg mt-44 lg:mt-52 md:space-x-20  md:space-y-0">
             {/* Sección Izquierda */}
             <div className="md:w-1/2 text-left mt-8 pl-7">
               <h2 className="text-3xl lg:text-2xl md:text-xl font-bold text-gray-800 uppercase">

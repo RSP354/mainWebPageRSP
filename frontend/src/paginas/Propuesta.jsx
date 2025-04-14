@@ -23,7 +23,7 @@ const Propuesta = () => {
 
 
     {/* seccion de paso a paso*/}
-    <div className="bg-gray-100 text-gray-800  mt-52  mx-10 rounded-3xl">
+    <div className="bg-gray-100 text-gray-800  mt-52 mx-8 sm:mx-10 rounded-3xl">
 	<div className="container mx-auto  flex flex-col p-6 ">
 		<h2 className="py-4 text-3xl font-bold text-center mt-14">Próximos pasos</h2>
 		<div className="divide-y divide-gray-300 mt-20">

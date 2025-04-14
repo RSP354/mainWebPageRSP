@@ -22,19 +22,11 @@ const Navbar = () => {
             <ul className="hidden lg:flex ml-3 xl:space-x-9 lg:space-x-5">
                 {navItems.map((item , index ) => (
                   <li key={index}>
-                    <Link className="lg:text-sm  xl:text-base font-semibold text-white drop-shadow-lg " to={item.href} onClick={() => window.scrollTo(0, 0)}>{item.label}</Link>
+                    <Link className="lg:text-sm  xl:text-base font-semibold text-white drop-shadow-lg  hover:text-yellow-200 transition-colors duration-300 " to={item.href} onClick={() => window.scrollTo(0, 0)}>{item.label}</Link>
                   </li>
                 ))}
             </ul>
-            <div className="hidden lg:flex justify-center xl:space-x-4 items-center lg:space-x-2  ">
-               <a href="#" className="py-2 px-3 font-medium border border-blue-600 rounded-md bg-gradient-to-r from-blue-300 to-blue-200    md:text-xs lg:text-sm xl:text-base "> 
-                  Inicia Sesion
-               </a>
-               <a href="#" className="border border-green-700 bg-gradient-to-r from-green-500 to-green-600 text-white
-               py-2 px-3 rounded-md   md:text-xs lg:text-sm xl:text-base">
-                 Registrate
-               </a>
-            </div>
+            
              <div className="lg:hidden md:flex flex-col justify-end">
                 <button onClick={toggleNavbar}>
                    {mobileDrawerOpen ? <X className="text-gray-100" /> : <Menu className="text-gray-100" />}
@@ -42,22 +34,14 @@ const Navbar = () => {
              </div>
             </div>
             {mobileDrawerOpen && (
-              <div className="fixed right-0 z-20 bg-gray-100 w-full p-12 flex flex-col justify-center items-center lg:hidden">
+              <div className="fixed right-0 z-20 bg-gray-200 w-full p-12 flex flex-col justify-center items-center lg:hidden">
                  <ul>
                    {navItems.map((item, index) => (
-                     <li key={index} className="py-4">
+                     <li key={index} className="py-4 text-base hover:text-yellow-100   transition-colors duration-100">
                        <Link to={item.href} onClick={() => window.scrollTo(0, 0)}>{item.label}</Link>
                      </li>
                    ))}
                  </ul>
-                  <div className="flex space-x-6 py-5">
-                    <a href="#" className="py-2 px-3 border border-blue-600 rounded-md  bg-gradient-to-r from-blue-300 to-blue-200 ">
-                       Inicia Sesion
-                    </a>
-                    <a href="#" className="py-2 px-3 rounded-md border border-green-700 bg-gradient-to-r from-green-500 to-green-600 text-white">
-                       Registrate
-                    </a>
-                  </div>
               </div>
             )}
      </div>

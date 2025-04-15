@@ -25,7 +25,7 @@ import camiloPic from '../assets/profile-pictures/testimonio1.png'
 
 
      return( 
-     <div className="overflow-x-hidden max-w-screen-2xl mt-20">
+     <div className="overflow-x-hidden max-w-screen-2xl  mt-20 ">
        <div className="text-black">
       
       {Width < 631 ? (

@@ -3,6 +3,7 @@ import { useState } from "react";
 import logo from "../assets/logo.jpg";
 import { navItems } from "../constants/info";
 import { Link } from "react-router-dom";
+import {motion } from "framer-motion";
 
 const Navbar = () => {
    const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
@@ -15,10 +16,15 @@ const Navbar = () => {
     <nav className="sticky top-0 z-50 py-6   backdrop-blur-lg border-b  border-neutral-700/80   bg-gradient-to-t from-transparent to-black/25">
         <div className="container px-4 mx-auto relative text-sm">
             <div className="flex justify-between items-center">
-            <div className="flex items-center flex-shrink-0">
+            <motion.div 
+                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0 , x: -100}}
+                transition={{ duration: 1}}
+                viewport={{ once: true}}
+                className="flex items-center flex-shrink-0">
                 <img className="h-14 w-14 mr-2 rounded-sm" src={logo} alt="logo" />
                 <span className="max-[370px]:text-[11px] text-xs sm:text-sm md:text-base  lg:text-base   xl:text-lg tracking-tighter font-medium text-white  drop-shadow-lg">RSP (Reclutamiento y Selección de Personal)</span>
-            </div>
+            </motion.div>
             <ul className="hidden lg:flex ml-3 xl:space-x-9 lg:space-x-5">
                 {navItems.map((item , index ) => (
                   <li key={index}>

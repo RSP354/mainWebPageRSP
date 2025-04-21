@@ -1,5 +1,5 @@
-import { useEffect, useRef } from "react";
-import { useAnimation, useInView, motion } from "framer-motion";
+
+import { motion } from "framer-motion";
 import { FaStar} from 'react-icons/fa';
  
 
@@ -13,15 +13,7 @@ import camiloPic from '../assets/profile-pictures/testimonio1.png'
  const Review = () => {
 
     const { innerWidth: Width } = window; 
-     const ref = useRef();
-      
-     const isInView = useInView(ref);
-     const mainControlls = useAnimation();
-     useEffect(() => {
-       if (isInView) {
-         mainControlls.start("visible");
-       }
-     }, [isInView]);
+     
 
 
      return( 
@@ -125,14 +117,14 @@ import camiloPic from '../assets/profile-pictures/testimonio1.png'
         <>
          <div className="container px-6 py-12 mx-auto">
     <div className="grid items-center gap-4 xl:grid-cols-5">
-        <motion.div 
-          ref={ref}
+        <motion.div    
           variants={{
             hidden: { opacity: 0 },
             visible: { opacity: 1 },
           }}
           initial="hidden"
-          animate={mainControlls}
+          whileInView="visible" 
+          viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5, delay: 0.25 }}
 
         className="max-w-2xl mx-auto rounded shadow-md bg-blue-50 p-6 my-8 space-y-4 text-center xl:col-span-2 xl:text-left"
@@ -144,13 +136,14 @@ import camiloPic from '../assets/profile-pictures/testimonio1.png'
             <div className="grid gap-4 md:grid-cols-2">
                 <div className="grid content-center gap-4">
                     <motion.div 
-                     ref={ref}
+                     
                      variants={{
                        hidden: { opacity: 0, x: -75, y: -45 },
                        visible: { opacity: 1, x: 0, y: 0 },
                      }}
                      initial="hidden"
-                     animate={mainControlls}
+                     whileInView="visible" 
+                     viewport={{ once: true, amount: 0.2 }}
                      transition={{ duration: 0.6, delay: 0.15 }}
                     
                     className="p-6 rounded shadow-md bg-blue-200 ">
@@ -176,13 +169,14 @@ import camiloPic from '../assets/profile-pictures/testimonio1.png'
 
 
                     <motion.div 
-                       ref={ref}
+                     
                        variants={{
                          hidden: { opacity: 0, x: -75, y: 45 },
                          visible: { opacity: 1, x: 0, y: 0 },
                        }}
                        initial="hidden"
-                       animate={mainControlls}
+                       whileInView="visible" 
+                       viewport={{ once: true, amount: 0.2 }}
                        transition={{ duration: 0.6, delay: 0.35 }}
                     className="p-6 rounded shadow-md bg-blue-100/80">
         <img src={melisaPic} alt="" className="w-20 h-20   mx-auto object-cover   rounded-full dark:bg-gray-500" />
@@ -205,13 +199,14 @@ import camiloPic from '../assets/profile-pictures/testimonio1.png'
                 </div>
                 <div className="grid content-center gap-4">
                     <motion.div 
-                      ref={ref}
+                      
                       variants={{
                         hidden: { opacity: 0, x: 75, y: -45 },
                         visible: { opacity: 1, x: 0, y: 0 },
                       }}
                       initial="hidden"
-                      animate={mainControlls}
+                      whileInView="visible" 
+                      viewport={{ once: true, amount: 0.2 }}
                       transition={{ duration: 0.7, delay: 0.55 }}
                     className="p-6 rounded shadow-md bg-blue-100/80">
         <img src={sandraPic} alt="" className="w-20 h-20   mx-auto object-cover   rounded-full dark:bg-gray-500" />
@@ -233,13 +228,14 @@ import camiloPic from '../assets/profile-pictures/testimonio1.png'
                     </motion.div>
 
                     <motion.div 
-                      ref={ref}
+                     
                       variants={{
                         hidden: { opacity: 0, x: 75, y: 45 },
                         visible: { opacity: 1, x: 0, y: 0 },
                       }}
                       initial="hidden"
-                      animate={mainControlls}
+                      whileInView="visible" 
+                      viewport={{ once: true, amount: 0.2 }}
                       transition={{ duration: 0.8, delay: 0.75 }}
 
                     className="p-6 rounded shadow-md bg-blue-200">

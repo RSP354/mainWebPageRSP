@@ -44,7 +44,7 @@ const Nosotros = () => {
              {/* ------------ Seccion de nosotros con video -------------- */ }
      <div>
         <h2 className='text-center  text-3xl  sm:text-5xl text-white font-semibold drop-shadow-lg
-         mt-40 '> Nuestra Historia</h2>
+        mt-36 xl:mt-40 '> Nuestra Historia</h2>
    </div>
 
         <div className="px-4  lg:px-12 max-w-screen-2xl mx-auto pt-40 ">
@@ -98,20 +98,20 @@ const Nosotros = () => {
                   </div>   
 
 
-                  <div className="md:w-4/5 xl:w-3/5 mx-auto">
-                       <h2 className="text-4xl md:text-lg  xl:text-4xl mt-10  md:mt-16 lg:mt-9 md:tracking-tight  text-left tracking-wide lg:tracking-wide text-indigo-50 drop-shadow-md font-bold mb-4 md:w-4/5 xl:w-full ">Impulsamos el Futuro Empresarial a través del Potencial Humano</h2>
-                       <p className="text-base md:text-sm lg:text-base mt-6 md:mt-3 lg:mt-6 text-gray-800 mb-8 font-medium text-justify">En RSP Reclutamiento y Selección de Personal, nos especializamos en conectar empresas con el mejor talento. Con años de experiencia y un enfoque innovador, hemos ayudado a transformar equipos y potenciar carreras profesionales</p>
+                  <div className="md:w-4/5 xl:w-3/5 mx-auto ">
+                  <h2 className="text-4xl md:tlusMD  lg:text-xl  xl:text-4xl    text-left  tracking-wide md:tracking-tighter lg:tracking-normal xl:tracking-wider text-indigo-50 drop-shadow-md font-bold mb-4 md:mb-2 lg:mb-4 md:w-full ">Impulsamos el Futuro Empresarial a través del Potencial Humano</h2>
+                       <p className="text-base md:text-xs lg:text-sm xl:text-base  text-gray-800 mb-8 md:mb-3 lg:mb-6 xl:mb-8 font-medium text-justify md:tracking-tighter lg:tracking-normal">En RSP Reclutamiento y Selección de Personal, nos especializamos en conectar empresas con el mejor talento. Con años de experiencia y un enfoque innovador, hemos ayudado a transformar equipos y potenciar carreras profesionales</p>
                        
 
 
-                       <h3  className="text-2xl md:text-lg xl:text-2xl mt-9 md:-mt-3  lg:-mt-0 xl:mt-9 text-center text-indigo-50  font-semibold mb-4 ">
-             Nuestros Pilares Fundamentales
-                </h3>
+                       <h3  className="text-2xl md:text-sm  lg:text-lg  xl:text-2xl  text-center text-indigo-50  font-semibold mb-5  ">
+                          Nuestros Pilares Fundamentales
+                       </h3>
   
 
 
                           {/* Sección de Valores en la misma fila */}
-  <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-3 lg:grid-cols-4 gap-4   xl:gap-4 mt-8 md:mt-6 lg:mt-8">
+  <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-3 lg:grid-cols-4 gap-5   xl:gap-4  ">
     {/* Integridad */}
     <div className="flex flex-col items-center">
       <div className="bg-indigo-500 text-white p-4 md:p-2 xl:p-4 rounded-full">
@@ -162,7 +162,7 @@ const Nosotros = () => {
 
       {/* ------------ SECCION DE OBJETIVOS --------------- */}
 
-      <div className="bg-gray-700 p-4  mt-56">
+      <div className="bg-gray-700 p-4 mt-40 xl:mt-56">
   <div aria-hidden="true" className="absolute inset-0 h-max w-full m-auto grid grid-cols-2 -space-x-52 opacity-20">
     <div className="blur-[106px] h-56 bg-gradient-to-br to-purple-400 from-blue-700"></div>
     <div className="blur-[106px] h-32 bg-gradient-to-r from-cyan-400 to-indigo-600"></div>

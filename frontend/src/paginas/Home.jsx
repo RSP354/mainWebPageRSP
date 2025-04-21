@@ -221,12 +221,12 @@ const Home = () => {
                      viewport={{ once: true, amount: 0.5 }}
                   
                   className="md:w-3/5 mx-auto">
-                       <h2 className="text-4xl text-indigo-50 drop-shadow-md font-semibold mb-4 md:w-4/5 xl:w-full ">Conoce nuestras ofertas laborales mas recientes!</h2>
-                       <p className="md:w-3/4 text-sm text-gray-800 mb-8 font-medium">Dirigete al siguiente boton para encontrar lo ultimo en ofertas de RSP!</p>
+                       <h2 className="text-4xl md:text-2xl lg:text-4xl text-indigo-50 drop-shadow-md font-semibold mb-4 md:w-full lg:w-full  md:tracking-tighter lg:tracking-tighter xl:tracking-normal">Conoce nuestras ofertas laborales mas recientes!</h2>
+                       <p className="md:w-3/4   text-base md:text-sm lg:text-base text-gray-800 mb-8 font-medium">Dirigete al siguiente boton para encontrar lo ultimo en ofertas de RSP!</p>
                        <button  onClick={() => window.open("https://www.facebook.com/empleosmedellin1/",
                          "_blank",
                          "noopener,noreferrer")} 
-                        className="bg-green-600 text-white px-5 py-2 mx-auto" >Descubre mas</button>
+                        className="bg-green-600 text-white px-5 py-2 mx-auto text-lg md:text-base lg:text-lg " >Descubre mas</button>
                   </motion.div>
                </div>
                  
@@ -297,7 +297,7 @@ const Home = () => {
 
        {/*  seccion de FAQ  */}
         
-    <div className="mt-36" id="faq">
+    <div className="mt-32" id="faq">
       <div className="container mx-auto flex flex-col gap-12 p-8 lg:flex-row">
          <motion.div 
             initial={{ opacity: 0, scale: 0.8}}

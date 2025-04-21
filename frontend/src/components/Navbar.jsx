@@ -44,7 +44,7 @@ const Navbar = () => {
                  <ul>
                    {navItems.map((item, index) => (
                      <li key={index} className="py-4 text-base hover:text-yellow-100   transition-colors duration-100">
-                       <Link to={item.href} onClick={() => window.scrollTo(0, 0)}>{item.label}</Link>
+                       <Link to={item.href} onClick={() => { window.scrollTo(0, 0);  toggleNavbar();}}>{item.label}</Link>
                      </li>
                    ))}
                  </ul>

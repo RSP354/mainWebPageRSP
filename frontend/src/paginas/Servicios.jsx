@@ -6,6 +6,9 @@ import experiencia from "../assets/experienciaValor.png"
 import calidad from "../assets/calidadValor.jpg"
 import seguimiento from "../assets/seguimientoValor.png"
 
+{/*  Agregando Animaciones*/}
+import { motion } from "framer-motion";
+
 import { useNavigate } from 'react-router-dom';
 
 {/* precios imports */ }
@@ -17,6 +20,10 @@ import { useNavigate } from 'react-router-dom';
  import { FaQuestionCircle } from 'react-icons/fa';
  import serviceFAQ from '../assets/faqservice.png';
 
+  
+
+
+
 
 const Servicios = () => {
 
@@ -27,6 +34,17 @@ const Servicios = () => {
     window.scrollTo(0, 0); 
   };
 
+  {/* funcion animacion IMAGEN HERO*/ }
+
+
+  const imageVariants = {
+    hidden: { clipPath: "inset(0 50% 0 50%"},
+    visible: {
+      clipPath: "inset(0 0% 0 0%",
+        transition: { duration: 1.2, ease: "easeInOut"},
+    }
+  }
+
 
   return (
    <>
@@ -36,13 +54,19 @@ const Servicios = () => {
    <div  >
   <div className="flex  md:h-[560px] xl:h-screen  items-center justify-center bg-green-800 p-5">
     <div className="grid md:grid-cols-2 grid-cols-1 items-center gap-20 md:px-10  w-full max-w-7xl ">
-       <div className="flex justify-center">
+       <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0 }}
+          variants={imageVariants}
+          
+       className="flex justify-center">
         <img src={serviceHeroPic} alt="" className="xl:w-[28rem] xl:h-[28rem] lg:w-96 lg:h-96 w-72 h-72 rounded-full " />
-      </div>
+      </motion.div>
       
       <div className='mt-0 md:mt-20 lg:mt-5'>
         <h1 className="mb-2 text-3xl md:text-xl lg:text-2xl  xl:text-3xl font-bold   text-white">Impulsa tu equipo con un <span className="text-green-500">Profesional</span> {" "} en Gestión Humana de alto nivel!</h1>
-        <p className="mb-6 text-white tracking-tighter mt-5  text-base  md:text-sm lg:text-base xl:text-lg"> En RSP, facilitamos la búsqueda y selección del talento ideal para tu empresa. A través de un Especialista en Gestión Humana, ofrecemos un servicio estratégico para identificar y atraer a los mejores candidatos, asegurando que cada puesto clave sea ocupado por profesionales altamente capacitados. Con un enfoque alineado a la cultura y necesidades de tu organización, garantizamos procesos de reclutamiento eficientes que impulsan el crecimiento y el éxito de tu equipo. </p>
+        <p className="mb-6 text-white tracking-tighter mt-5  text-base  md:text-sm lg:text-base xl:text-lg "> En RSP, facilitamos la búsqueda y selección del talento ideal para tu empresa. A través de un Especialista en Gestión Humana, ofrecemos un servicio estratégico para identificar y atraer a los mejores candidatos, asegurando que cada puesto clave sea ocupado por profesionales altamente capacitados. Con un enfoque alineado a la cultura y necesidades de tu organización, garantizamos procesos de reclutamiento eficientes que impulsan el crecimiento y el éxito de tu equipo. </p>
         <div className="flex justify-center space-x-5">
           <button className="flex w-full items-center justify-center gap-2 rounded-2xl bg-rose-500 p-5 py-3 font-semibold text-white hover:bg-rose-700"
               onClick={() => window.open("https://wa.me/573216143596?text=Hola,%20quiero%20saber%20más%20de%20los%20servicios%20de%20RSP", "_blank")}
@@ -70,15 +94,28 @@ const Servicios = () => {
           
       <div className="text-center p-8  bg-white">
 
-     <h2 className="font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl mt-20 lg:mt-36">
+     <motion.h2 
+     
+     whileInView={{ opacity: 1, y: 0 }}
+     initial={{ opacity: 0 , y: -100}}
+     transition={{ duration: 1}}
+     viewport={{ once: true }}
+
+     className="font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl mt-20 lg:mt-36">
         ¿Por qué elegirnos?
-    </h2>
+    </motion.h2>
      
     
 
      <div className='mt-28 lg:mt-36'>
 
-    <div className="flex flex-wrap items-center mt-20 text-center">
+    <motion.div
+         initial={{ opacity: 0, x: 100 }}
+         whileInView={{ opacity: 1, x: 0 }}
+         transition={{ duration: 1, delay: 0.3 }}
+         viewport={{ once: true, amount: 0.3 }}   
+    
+      className="flex flex-wrap items-center mt-20 text-center">
         <div className="w-full md:w-3/5 lg:w-1/2 px-4">
             <img src={personalizacion} alt="gem" className="inline-block rounded-3xl shadow-2xl border border-gray-300 shadow-indigo-200  w-[400px] h-[240px]" />
         </div>
@@ -91,9 +128,15 @@ const Servicios = () => {
              garantizando soluciones a medida, ágiles y con resultados excepcionales.
             </p>
         </div>
-    </div>
+    </motion.div>
 
-    <div className="flex flex-wrap items-center mt-20  text-center">
+    <motion.div 
+         initial={{ opacity: 0, x: -100 }}
+         whileInView={{ opacity: 1, x: 0 }}
+         transition={{ duration: 1, delay: 0.3 }}
+         viewport={{ once: true, amount: 0.3 }}   
+    
+      className="flex flex-wrap items-center mt-20  text-center">
         <div className="w-full md:w-3/5 lg:w-1/2 px-4">
             <img src={experiencia} alt="project members" className="inline-block rounded-3xl  border border-gray-300 shadow-indigo-300  shadow-2xl w-[400px] h-[240px]" />
         </div>
@@ -107,9 +150,15 @@ const Servicios = () => {
             capacitación y retención del talento mediante estrategias innovadoras y adaptadas a cada contexto.
             </p>
         </div>
-    </div>
+    </motion.div>
 
-    <div className="flex flex-wrap items-center mt-20   text-center">
+    <motion.div 
+       initial={{ opacity: 0, x: 100 }}
+       whileInView={{ opacity: 1, x: 0 }}
+       transition={{ duration: 1, delay: 0.3 }}
+       viewport={{ once: true, amount: 0.3 }}
+    
+    className="flex flex-wrap items-center mt-20   text-center">
         <div className="w-full md:w-3/5 lg:w-1/2 px-4">
             <img src={calidad} alt="editor" className="inline-block rounded-3xl shadow-lg shadow-indigo-200 border border-gray-300  w-[400px] h-[240px]" />
         </div>
@@ -123,9 +172,15 @@ const Servicios = () => {
             Con nuestro enfoque, aseguramos un impacto positivo y un crecimiento sostenible para tu empresa.
             </p>
         </div>
-    </div>
+    </motion.div>
    
-    <div className="flex flex-wrap items-center mt-20 text-center">
+    <motion.div 
+        initial={{ opacity: 0, x: -100 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1, delay: 0.3 }}
+        viewport={{ once: true, amount: 0.3 }}
+    
+    className="flex flex-wrap items-center mt-20 text-center">
         <div className="w-full md:w-3/5 lg:w-1/2 px-4">
             <img src={seguimiento} alt="bulk editing" className="inline-block rounded-3xl shadow-2xl shadow-indigo-200 border border-gray-300 w-[400px] h-[240px]" />
         </div>
@@ -140,7 +195,7 @@ const Servicios = () => {
             Nuestro acompañamiento fortalece la retención y consolida un equipo alineado con tus objetivos.
             </p>
         </div>
-    </div>
+    </motion.div>
 
      </div>
 
@@ -149,14 +204,23 @@ const Servicios = () => {
  {/* -------------- Seccion precios y servicios RSP -------------- */}
     
      <div className="mt-24 md:mt-32  lg:mt-40 px-6  mx-auto max-w-7xl  ">
+        <motion.div
+           initial={{ opacity: 0, scale: 0.8}}
+           whileInView = {{ opacity: 1, scale: 1}}
+           transition={{ duration: 0.8}}
+           viewport={{ once: true, amount: 0.1 }}
+        
+        >
         <h2 className="text-3xl sm:text-5xl lg:text-6xl text-center my-8
         tracking-wider text-white drop-shadow-md">
           Nuestros Planes
           </h2>
-            <p className='text-center my-10 tracking-wider xl:text-lg text-gray-950 font-bold drop-shadow-xl text-shadowCT '> Ofrecemos tres niveles de servicio adaptados a tus
+            <p className='text-center my-10 tracking-wider   xl:text-lg text-gray-950 font-bold drop-shadow-xl text-shadowCT '> Ofrecemos tres niveles de servicio adaptados a tus
             necesidades y presupuesto</p>
+        </motion.div>
+        
 
-          <div className="flex flex-wrap mt-16  ">
+          <div className="flex flex-wrap mt-20  ">
           {pricingOptions.map((option, index) => (
            <div key={index} className="w-full sm:w-1/2 lg:w-1/3 p-2">
               <div className={`p-10 border border-neutral-700 shadow-xl shadow-indigo-200 rounded-xl  ${option.title === 'Plus' ? 'bg-yellow-200' : 'bg-white'}`}>

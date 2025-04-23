@@ -6,11 +6,14 @@ import FooterCT from '../components/FooterRsp'
 const Portada = () => {
   return (
     <>
-     <Navbar />
+     <div className='overflow-clip' >
+    <Navbar />
+   
+    
+      <Outlet />
       
-     <Outlet />
-     
-     <FooterCT />
+      <FooterCT />   
+      </div>
     </>
   )
 }

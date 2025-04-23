@@ -18,6 +18,7 @@ const Nosotros = () => {
 
   return (
     <>
+   
         <div>
       <div
         style={{ backgroundImage: `url(${nosotrosHero})` }}
@@ -271,7 +272,7 @@ const Nosotros = () => {
 
     
 
-
+  
     </>
   )
 }

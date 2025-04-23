@@ -218,7 +218,7 @@ const Home = () => {
                        delay: 0.2,     
                        ease: "easeOut"
                      }}
-                     viewport={{ once: true, amount: 0.5 }}
+                     viewport={{ once: true, amount: 0.3 }}
                   
                   className="md:w-3/5 mx-auto">
                        <h2 className="text-4xl md:text-2xl lg:text-4xl text-indigo-50 drop-shadow-md font-semibold mb-4 md:w-full lg:w-full  md:tracking-tighter lg:tracking-tighter xl:tracking-normal">Conoce nuestras ofertas laborales mas recientes!</h2>

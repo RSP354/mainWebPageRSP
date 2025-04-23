@@ -45,6 +45,40 @@ const Servicios = () => {
     }
   }
 
+   
+    {/*  Animacion de los planes de rsp*/}
+
+    const projectVariants = {
+      hidden: {
+          opacity : 0, scale: 0.8, rotate: -40, y: 50
+       },
+       visible: {
+           opacity: 1,
+           scale: 1, 
+           rotate: 0,
+           y: 0,
+           transition: {
+             duration: 3,
+             ease: "easeOut",
+             type: "spring",
+             bounce: 0.4,
+           }
+       }
+ }
+   
+
+ const textVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1,
+      ease: "easeOut",
+    },
+  },
+};
+
 
   return (
    <>
@@ -222,7 +256,14 @@ const Servicios = () => {
 
           <div className="flex flex-wrap mt-20  ">
           {pricingOptions.map((option, index) => (
-           <div key={index} className="w-full sm:w-1/2 lg:w-1/3 p-2">
+           <motion.div key={index}
+           initial= "hidden"
+           whileInView="visible"
+           viewport={{ once: true, amount: 0.2}}
+           variants={projectVariants}
+           
+           
+           className="w-full sm:w-1/2 lg:w-1/3 p-2">
               <div className={`p-10 border border-neutral-700 shadow-xl shadow-indigo-200 rounded-xl  ${option.title === 'Plus' ? 'bg-yellow-200' : 'bg-white'}`}>
                  <p className="text-4xl mb-8 ">
                   {option.title}
@@ -260,7 +301,7 @@ const Servicios = () => {
                   Contratar
                   </a>
             </div>
-            </div>
+            </motion.div>
           ))}
           </div>
         </div>
@@ -268,17 +309,29 @@ const Servicios = () => {
      {/* --------------  Servicios Adicionales ------------ */}
      
      <div className="flex flex-col items-start min-h-screen px-8 bg-[#0a0f2d] py-24 mt-60">
-  <div className="max-w-lg text-left text-white">
+  <motion.div 
+    initial={{ opacity: 0, x: -100 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    transition={{ duration: 1, delay: 0.2 }}
+    viewport={{ once: true, amount: 0.3 }}
+  
+  className="max-w-lg text-left text-white">
     <h2 className="text-3xl font-bold mt-2">
       SERVICIOS ADICIONALES PARA TU EMPRESA
     </h2>
     <p className="text-gray-300 mt-3">
       Para promover el bienestar y el crecimiento de tu equipo, ponemos a tu disposición servicios enfocados en el fortalecimiento del desarrollo organizacional y el equilibrio emocional en el ámbito laboral.
     </p>
-  </div>
+  </motion.div>
 
-  {/* Contenedor separado con margen superior */}
-  <div className="relative max-w-7xl mx-auto mt-10 lg:mt-20">
+  {/* Contenedor separado con datos del plan ultimate */}
+  <motion.div 
+     initial="hidden"
+     whileInView="visible"
+     viewport={{ once: true, amount: 0.2 }}
+      variants={textVariants}
+  
+   className="relative max-w-7xl mx-auto mt-10 lg:mt-20">
     <div className="max-w-lg mx-auto rounded-lg shadow-lg overflow-hidden lg:max-w-none lg:flex">
       <div className="flex-1 px-6 py-8 lg:p-12 bg-gray-600">
         <h3 className="text-2xl font-extrabold text-white sm:text-3xl">
@@ -383,16 +436,22 @@ const Servicios = () => {
         </div>
       </div>
     </div>
-  </div>
+  </motion.div>
 </div>
 
      {/* -----------Seccion FAQ en Servicios RSP ----------------- */}
 
      <div className="max-w-6xl mx-auto px-5 py-10 mt-36 ">
       {/* Título  */}
-      <h1 className="text-center text-2xl md:text-3xl font-bold drop-shadow-lg mb-10 text-white ">
+      <motion.h1 
+         whileInView={{ opacity: 1, y: 0 }}
+         initial={{ opacity: 0 , y: -100}}
+         transition={{ duration: 1}}
+         viewport={{ once: true }}
+      
+      className="text-center text-2xl md:text-3xl font-bold drop-shadow-lg mb-10 text-white ">
         ¿SU EMPRESA ENFRENTA ESTOS DESAFÍOS?
-      </h1>
+      </motion.h1>
 
       {/* Contenedor principal */}
 
@@ -408,7 +467,13 @@ const Servicios = () => {
         </div>
 
         {/* Columna derecha: Preguntas */}
-        <div className="w-full md:w-1/2 flex flex-col justify-center mt-8 md:mt-0">
+        <motion.div 
+           initial={{ opacity: 0, scale: 0.8}}
+           whileInView = {{ opacity: 1, scale: 1}}
+           transition={{ duration: 0.8}}
+           viewport={{ once: true, amount: 0.3 }}
+          
+        className="w-full md:w-1/2 flex flex-col justify-center mt-8 md:mt-0">
         
           {/* Pregunta 1 */}
           <div className="flex items-start mb-6">
@@ -461,13 +526,18 @@ const Servicios = () => {
               </p>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
 
       {/* Letreo a la derecha */}
-      <div className="text-right mt-5">
+      <motion.div
+         initial={{ opacity: 0, scale: 0.8}}
+         whileInView = {{ opacity: 1, scale: 1}}
+         transition={{ duration: 0.8}}
+         viewport={{ once: true, amount: 0.1 }}
+         className="text-right mt-9 lg:mt-5">
         <strong className="text-xl text-white font-bold drop-shadow-lg">¡Nosotros podemos apoyarlos!</strong>
-      </div>
+      </motion.div>
     </div>
 
    </>

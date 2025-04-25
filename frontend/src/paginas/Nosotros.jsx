@@ -1,7 +1,7 @@
 import nosotrosHero from '../assets/nosotrosHero.png'
 import aboutVideo from "../assets/aboutusVideo.mp4";
 import { useRef } from "react";
-import {motion} from "framer-motion";
+import {delay, motion} from "framer-motion";
 import { TbTargetArrow } from "react-icons/tb";
 
 import angelPic from '../assets/fotosNosotros/angl.png'
@@ -12,10 +12,58 @@ import taniaPic from '../assets/fotosNosotros/tn.png'
 import natalyPic from '../assets/fotosNosotros/nt.png'
 
 
+ {/* Manejo del motion al lado del video */}
+   const containerVariants = {
+     hidden: { opacity: 0, x: 100},
+     visible: {
+         opacity: 1,
+         x: 0,
+         transition: {
+            duration: 0.6,
+            staggerChildren: 0.5,
+         }
+     }
+   }
+   
+   const childVariants = {
+      hidden: { opacity: 0, x: 100},
+      visible: { opacity: 1, x: 0, transition: { duration: 0.6}}
+   }
+
+
+   {/*Manejo del motion de objectives */}
+       const containerVariantsObjectives = {
+          hidden: { opacity: 0, y: 20},
+          visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+               duration: 1,
+               staggerChildren: 0.5,
+            },
+          },
+       }  
+       
+       const itemVariantsObjectives = {
+          hidden: {
+             opacity: 0, y: 20
+           },
+            visible: {
+              opacity: 1, y: 0, transition: { duration: 0.5 },
+            }
+          }
+       
+
+
+
+
 const Nosotros = () => {
 
+   {/* Funcion del video */}
   const aboutVideoRef = useRef(null);
 
+  
+      
   return (
     <>
    
@@ -28,7 +76,13 @@ const Nosotros = () => {
                   px-6 sm:px-5 md:px-14 py-12 md:py-16"
       >
         {/* Limita el ancho del contenido y centra verticalmente */}
-        <div className="max-w-[600px]">
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.8}}
+          whileInView = {{ opacity: 1, scale: 1}}
+          transition={{ duration: 0.8}}
+          viewport={{ once: true, amount: 0.3 }}
+        
+        className="max-w-[600px]">
           <h1 className="text-sm sm:text-base md:text-3xl lg:text-4xl xl:text-5xl font-bold drop-shadow-md mb-4 leading-tight text-white">
           Conectamos Talento  <br className="block sm:hidden md:block" />
           y Oportunidades
@@ -37,16 +91,21 @@ const Nosotros = () => {
           Impulsamos el crecimiento de empresas y profesionales <br className="hidden sm:block" />
            a través de procesos de selección innovadores y personalizados
           </p>
-        </div>
+        </motion.div>
       </div>
     </div>
 
 
              {/* ------------ Seccion de nosotros con video -------------- */ }
-     <div>
+     <motion.div
+         whileInView={{ opacity: 1, y: 0 }}
+         initial={{ opacity: 0 , y: -100}}
+         transition={{ duration: 1}}
+         viewport={{ once: true }}
+     >
         <h2 className='text-center  text-3xl  sm:text-5xl text-white font-semibold drop-shadow-lg
         mt-36 xl:mt-40 '> Nuestra Historia</h2>
-   </div>
+   </motion.div>
 
         <div className="px-4  lg:px-12 max-w-screen-2xl mx-auto pt-40 ">
               
@@ -99,20 +158,28 @@ const Nosotros = () => {
                   </div>   
 
 
-                  <div className="md:w-4/5 xl:w-3/5 mx-auto ">
-                  <h2 className="text-4xl md:tlusMD  lg:text-xl  xl:text-4xl    text-left  tracking-wide md:tracking-tighter lg:tracking-normal xl:tracking-wider text-indigo-50 drop-shadow-md font-bold mb-4 md:mb-2 lg:mb-4 md:w-full ">Impulsamos el Futuro Empresarial a través del Potencial Humano</h2>
-                       <p className="text-base md:text-xs lg:text-sm xl:text-base  text-gray-800 mb-8 md:mb-3 lg:mb-6 xl:mb-8 font-medium text-justify md:tracking-tighter lg:tracking-normal">En RSP Reclutamiento y Selección de Personal, nos especializamos en conectar empresas con el mejor talento. Con años de experiencia y un enfoque innovador, hemos ayudado a transformar equipos y potenciar carreras profesionales</p>
+                  <motion.div 
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.2 }}
+                    variants={containerVariants}   
+                  className="md:w-4/5 xl:w-3/5 mx-auto ">
+                  <motion.h2  variants={childVariants}
+                   className="text-4xl md:tlusMD  lg:text-xl  xl:text-4xl    text-left  tracking-wide md:tracking-tighter lg:tracking-normal xl:tracking-wider text-indigo-50 drop-shadow-md font-bold mb-4 md:mb-2 lg:mb-4 md:w-full ">Impulsamos el Futuro Empresarial a través del Potencial Humano</motion.h2>
+                       <motion.p variants={childVariants}
+                        className="text-base md:text-xs lg:text-sm xl:text-base  text-gray-800 mb-8 md:mb-3 lg:mb-6 xl:mb-8 font-medium text-justify md:tracking-tighter lg:tracking-normal">En RSP Reclutamiento y Selección de Personal, nos especializamos en conectar empresas con el mejor talento. Con años de experiencia y un enfoque innovador, hemos ayudado a transformar equipos y potenciar carreras profesionales</motion.p>
                        
 
 
-                       <h3  className="text-2xl md:text-sm  lg:text-lg  xl:text-2xl  text-center text-indigo-50  font-semibold mb-5  ">
+                       <motion.h3 variants={childVariants}  className="text-2xl md:text-sm  lg:text-lg  xl:text-2xl  text-center text-indigo-50  font-semibold mb-5  ">
                           Nuestros Pilares Fundamentales
-                       </h3>
+                       </motion.h3>
   
 
 
                           {/* Sección de Valores en la misma fila */}
-  <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-3 lg:grid-cols-4 gap-5   xl:gap-4  ">
+  <motion.div  variants={childVariants}
+    className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-3 lg:grid-cols-4 gap-5   xl:gap-4  ">
     {/* Integridad */}
     <div className="flex flex-col items-center">
       <div className="bg-indigo-500 text-white p-4 md:p-2 xl:p-4 rounded-full">
@@ -156,8 +223,8 @@ const Nosotros = () => {
         Trabajo cercano y colaborativo con clientes.
       </p>
     </div>
-  </div>
-    </div>
+  </motion.div>
+    </motion.div>
     </div>
     </div>
 
@@ -169,49 +236,76 @@ const Nosotros = () => {
     <div className="blur-[106px] h-32 bg-gradient-to-r from-cyan-400 to-indigo-600"></div>
   </div>
   <div className="max-w-7xl mx-auto px-6 md:px-12 xl:px-6">
-    <div className="md:w-2/3 lg:w-1/2 mt-12 text-gray-100">
+    <motion.div 
+        initial={{ opacity: 0, x: -100 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, delay: 0.1 }}
+        viewport={{ once: true, amount: 0.3 }}
+
+       className="md:w-2/3 lg:w-1/2 mt-12 text-gray-100">
        <TbTargetArrow className='w-9 h-9' />
       <h2 className="my-8 text-2xl font-bold text-white md:text-4xl">Nuestros Objetivos</h2>
       <p className="text-gray-300">Impulsamos logros al unir talentos excepcionales con desafíos de alto impacto</p>
-    </div>
-    <div className="mt-16 grid divide-x divide-y divide-gray-700 overflow-hidden rounded-3xl border text-gray-600 border-gray-700 sm:grid-cols-2 lg:grid-cols-4 lg:divide-y-0 xl:grid-cols-4">
+    </motion.div>
+    
+     {/* Container de datos de objectivos */}
+
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      variants={containerVariantsObjectives}
+      viewport={{ once: true, amount: 0.2}}
+    className="mt-16 grid divide-x divide-y divide-gray-700 overflow-hidden rounded-3xl border text-gray-600 border-gray-700 sm:grid-cols-2 lg:grid-cols-4 lg:divide-y-0 xl:grid-cols-4">
+      
       <div className="group relative bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
-        <div className="relative space-y-8 py-12 p-8">
+        <motion.div 
+         variants={itemVariantsObjectives}
+        className="relative space-y-8 py-12 p-8">
           <img src="https://www.svgrepo.com/show/200008/human-resources-search.svg" loading="lazy" width="200" height="200" className="w-14 h-14 rounded-full" style={{ color: "transparent" }} />
           <div className="space-y-2">
             <h5 className="text-xl font-semibold text-white transition group-hover:text-secondary">Selección Precisa</h5>
             <p className="text-gray-300">Identificamos a los candidatos ideales que maximizan el rendimiento de tu empresa.</p>
           </div>
-        </div>
+        </motion.div>
       </div>
+
       <div className="group relative bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
-        <div className="relative space-y-8 py-12 p-8">
+        <motion.div 
+         variants={itemVariantsObjectives}
+        className="relative space-y-8 py-12 p-8">
           <img src="https://www.svgrepo.com/show/213566/finances-pie-chart.svg" loading="lazy" width="200" height="200" className="w-14 h-14 rounded-full" style={{ color: "transparent" }} />
           <div className="space-y-2">
             <h5 className="text-xl font-semibold text-white transition group-hover:text-secondary">Ahorro de costos</h5>
             <p className="text-gray-300">Reducimos hasta un 50% los gastos de contratación al evitar procesos fallidos.</p>
           </div>
-        </div>
+        </motion.div>
       </div>
+
       <div className="group relative bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
-        <div className="relative space-y-8 py-12 p-8">
+        <motion.div
+       variants={itemVariantsObjectives}
+        className="relative space-y-8 py-12 p-8">
           <img src="https://www.svgrepo.com/show/118511/clock.svg" loading="lazy" width="200" height="200" className="w-14 h-14 rounded-full" style={{ color: "transparent" }} />
           <div className="space-y-2">
             <h5 className="text-xl font-semibold text-white transition group-hover:text-secondary">Procesos Eficientes </h5>
             <p className="text-gray-300 tracking-tight text-sm  xl:text-base">Optimizamos cada etapa del proceso de reclutamiento mediante metodologías ágiles y tecnologías avanzadas, garantizando tiempos de respuesta rápidos.</p>
           </div>
-        </div>
+        </motion.div>
       </div>
+
       <div className="group relative bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
-        <div className="relative space-y-8 py-12 p-8">
+        <motion.div
+         variants={itemVariantsObjectives}
+         className="relative space-y-8 py-12 p-8">
           <img src="https://www.svgrepo.com/show/65353/strongbox.svg" loading="lazy" width="200" height="200" className="w-14 h-14 rounded-full" style={{ color: "transparent" }} />
           <div className="space-y-2">
             <h5 className="text-xl font-semibold text-white transition group-hover:text-secondary">Confidencialidad</h5>
             <p className="text-gray-300">Procesos discretos para búsquedas estratégicas o reemplazos sensibles, con acuerdos de privacidad.</p>
           </div>
-        </div>
+        </motion.div>
       </div>
-    </div>
+
+    </motion.div>
   </div>
 </div>
 

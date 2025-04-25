@@ -5,7 +5,7 @@ const TYC = () => {
     <>
     
        
-       <div className="bg-gray-100 text-gray-900 mt-14  mx-2 rounded-3xl">
+       <div className="bg-gray-100 text-gray-900 mt-14  mx-3 xl:mx-5 rounded-3xl">
       <div className="container grid grid-cols-12 mx-auto">
         <div className="flex flex-col justify-center col-span-12 align-middle bg-gray-700 bg-no-repeat bg-cover lg:col-span-6 lg:h-auto rounded-xl" 
         style= {{

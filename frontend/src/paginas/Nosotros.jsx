@@ -313,10 +313,20 @@ const Nosotros = () => {
      {/* ------------ Seccion de equipos  -------------- */}
 
   <div className="py-6 bg-green-100 text-gray-800 mt-56 mx-7 rounded-3xl">
-	<div className="container flex flex-col items-center justify-center p-4 mx-auto space-y-8 sm:p-10">
-		<h1 className="text-4xl font-bold leading-none text-center sm:text-5xl">Nuestro equipo</h1>
-		<p className="max-w-2xl text-center text-gray-600">En RSP reclutamiento y selección de personal, nuestro grupo es el pilar fundamental que impulsa el éxito de cada proyecto y el crecimiento de nuestros clientes. Estamos conformados por un grupo de profesionales apasionados y comprometidos, con amplia experiencia en la identificación y captación de talento.</p>
-		<div className="flex flex-row flex-wrap-reverse justify-center">
+	<div className="container flex flex-col items-center justify-center p-4 mx-auto space-y-7 sm:p-10">
+		
+    <motion.div 
+     initial={{ opacity: 0, scale: 0.8}}
+     whileInView = {{ opacity: 1, scale: 1}}
+     transition={{ duration: 0.8}}
+     viewport={{ once: true, amount: 0.3 }}
+    className='space-y-8 p-8 tracking-tighter'>
+    <h1 className="text-4xl font-bold leading-none text-center sm:text-5xl">Nuestro equipo</h1>
+		<p className="max-w-2xl text-center text-gray-600">En RSP reclutamiento y selección de personal, nuestro grupo es el pilar fundamental que impulsa el éxito de cada proyecto y el crecimiento de nuestros clientes. Estamos conformados por un grupo de profesionales apasionados y comprometidos, con amplia experiencia en la identificación y captación de talento.</p>                
+    </motion.div>
+   
+		
+    <div className="flex flex-row flex-wrap-reverse justify-center">
 			<div className="flex flex-col justify-center m-8 text-center">
       <div className='self-center mb-4 bg-gray-500  rounded-full flex-shrink-0 bg-cover bg-center  w-24 h-24'>
         <img src={yulyPic} alt="" className="relative top-[0.15rem] left-[0.01rem]"  />

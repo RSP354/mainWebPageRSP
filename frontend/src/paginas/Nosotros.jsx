@@ -54,6 +54,21 @@ import natalyPic from '../assets/fotosNosotros/nt.png'
           }
        
 
+          {/*  Manejo del motion de iconos de TEAM*/}
+
+          const iconVariantsTeam = (duration) => ({
+              initial: { y: -10},
+              animate: {
+                y: [10, -10],
+                transition: {
+                   duration: duration,
+                   ease: "linear",
+                   repeat: Infinity,
+                   repeatType: "reverse",
+                }
+              }
+          })
+
 
 
 
@@ -326,50 +341,86 @@ const Nosotros = () => {
     </motion.div>
    
 		
-    <div className="flex flex-row flex-wrap-reverse justify-center">
-			<div className="flex flex-col justify-center m-8 text-center">
-      <div className='self-center mb-4 bg-gray-500  rounded-full flex-shrink-0 bg-cover bg-center  w-24 h-24'>
+    <motion.div 
+      whileInView={{ opacity: 1, x: 0 }}
+      initial={{ opacity: 0, x: -100 }}
+      transition={{ duration: 1.3}}
+      viewport={{ once: true, amount: 0.2 }}
+      className="flex flex-row flex-wrap-reverse justify-center">
+			
+      <div className="flex flex-col justify-center m-8 text-center">   
+        <motion.div 
+         initial="initial"
+         animate="animate"
+         variants={iconVariantsTeam(3)}
+        className='self-center mb-4 bg-gray-500  rounded-full flex-shrink-0 bg-cover bg-center  w-24 h-24'>
         <img src={yulyPic} alt="" className="relative top-[0.15rem] left-[0.01rem]"  />
-        </div>               
+        </motion.div>   
 				<p className="text-xl font-semibold leading-tight">Yuleysy Betancur</p>
 				<p className="text-gray-600">Psicológa</p>
 			</div>
+
 			<div className="flex flex-col justify-center m-8 text-center">
-      <div className='self-center mb-4 bg-gray-500  rounded-full flex-shrink-0 bg-cover bg-center  w-24 h-24'>
+        <motion.div
+         initial="initial"
+         animate="animate"
+         variants={iconVariantsTeam(5)}
+        className='self-center mb-4 bg-gray-500  rounded-full flex-shrink-0 bg-cover bg-center  w-24 h-24'>
         <img src={natalyPic} alt="" className="relative top-[0.12rem] left-[0.142rem]"  />
-        </div>
+        </motion.div>
 				<p className="text-xl font-semibold leading-tight">Nataly Jaramillo</p>
 				<p className="text-gray-600">Psicológa</p>
 			</div>
+
 			<div className="flex flex-col justify-center m-8 text-center">
-				<div className='self-center mb-4 bg-gray-500  rounded-full flex-shrink-0 bg-cover bg-center  w-24 h-24'>
+				<motion.div
+        initial="initial"
+        animate="animate"
+        variants={iconVariantsTeam(2)}
+        className='self-center mb-4 bg-gray-500  rounded-full flex-shrink-0 bg-cover bg-center  w-24 h-24'>
         <img src={andresPic} alt="" className="relative right-[0.2rem]"  />
-        </div>
+        </motion.div>
 				<p className="text-xl font-semibold leading-tight">Andres Galvan</p>
 				<p className="text-gray-600">Ing. Software</p>
 			</div>
+
 			<div className="flex flex-col justify-center m-8 text-center">
-      <div className='self-center mb-4 bg-gray-500  rounded-full flex-shrink-0 bg-cover bg-center  w-24 h-24'>
+        <motion.div 
+         initial="initial"
+         animate="animate"
+         variants={iconVariantsTeam(5.5)}
+         className='self-center mb-4 bg-gray-500  rounded-full flex-shrink-0 bg-cover bg-center  w-24 h-24'>
         <img src={bryanPic} alt="" className="relative top-[0.22rem]"  />
-        </div>
+        </motion.div>
 				<p className="text-xl font-semibold leading-tight">Bryan Henao</p>
 				<p className="text-gray-600">Admin Empresas</p>
 			</div>
+
 			<div className="flex flex-col justify-center m-8 text-center">
-      <div className='self-center mb-4 bg-gray-500  rounded-full flex-shrink-0 bg-cover bg-center  w-24 h-24'>
+        <motion.div 
+        initial="initial"
+        animate="animate"
+        variants={iconVariantsTeam(4)}
+        className='self-center mb-4 bg-gray-500  rounded-full flex-shrink-0 bg-cover bg-center  w-24 h-24'>
         <img src={taniaPic} alt="" className="relative  right-[0.07rem] top-[0.06rem]"  />
-        </div>
+        </motion.div>
 				<p className="text-xl font-semibold leading-tight">Tania Garcia</p>
 				<p className="text-gray-600">Admin Empresas</p>
 			</div>
-			<div className="flex flex-col justify-center m-8 text-center">
-      <div className='self-center mb-4 bg-gray-500  rounded-full flex-shrink-0 bg-cover bg-center  w-24 h-24'>
+			
+      <div className="flex flex-col justify-center m-8 text-center">
+        <motion.div 
+          initial="initial"
+          animate="animate"
+          variants={iconVariantsTeam(2.5)}
+          className='self-center mb-4 bg-gray-500  rounded-full flex-shrink-0 bg-cover bg-center  w-24 h-24'>
         <img src={angelPic} alt="" className="relative top-[0.12rem] left-[0.12rem]"  />
-        </div>
+        </motion.div>
 				<p className="text-xl font-semibold leading-tight">Angel Herrera</p>
 				<p className="text-gray-600">Jefe Gestión Humana</p>
 			</div>
-		</div>
+
+		</motion.div>
 	</div>
   </div>
 

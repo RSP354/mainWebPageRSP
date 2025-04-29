@@ -1,9 +1,17 @@
 import contacto from '../assets/contactus.jpg'
+import {motion} from "framer-motion";
+
 
 const Contactanos = () => {
   return (
     <>
-     <div className="container mx-auto px-4 mt-10">
+     <motion.div
+       initial={{ opacity: 0, x: -100 }}
+       whileInView={{ opacity: 1, x: 0 }}
+       transition={{ duration: 1, delay: 0.2 }}
+       viewport={{ once: true, amount: 0.1 }}   
+     
+     className="container mx-auto px-4 mt-10">
   <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
     
     
@@ -29,7 +37,7 @@ const Contactanos = () => {
             </div>
             <div>
               <h3 className="text-sm font-semibold text-gray-700">Dirección</h3>
-              <p className="text-xs text-gray-600">Cl 56 Sur#36-11 Sabaneta</p>
+              <p className="text-xs text-gray-600">Cl 56 Sur #36-11 Sabaneta</p>
             </div>
           </div>
         </div>
@@ -38,11 +46,12 @@ const Contactanos = () => {
 
     
     <div className="flex flex-col justify-center p-8 bg-gray-100">
+      
       <h2 className="text-2xl font-bold text-gray-800 mb-4">Comunícate con nosotros</h2>
       <h3 className="text-xl text-gray-700 mb-6">
         Tanto si estás contratando como si estás buscando empleo, estamos aquí para escucharte.
       </h3>
-      <div>
+      <div >
         <a
           href="https://docs.google.com/forms/d/e/1FAIpQLScGu-1xgWc9ExntAr8DWrkU_lkD2xBwlSRAMDLZC87MbCk8uA/viewform"
           target="_blank"
@@ -52,10 +61,11 @@ const Contactanos = () => {
           Escríbenos
         </a>
       </div>
+      
     </div>
 
   </div>
-</div>
+</motion.div>
 
           
 

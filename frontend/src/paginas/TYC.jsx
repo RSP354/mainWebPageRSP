@@ -1,11 +1,32 @@
+import {motion } from "framer-motion";
 
 
 const TYC = () => {
+
+  const textVariantsTyC = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 1,
+        ease: "easeOut",
+      },
+    },
+  };
+
+
+
   return (
     <>
     
        
-       <div className="bg-gray-100 text-gray-900 mt-14  mx-3 xl:mx-5 rounded-3xl">
+       <motion.div 
+         initial="hidden"
+         whileInView="visible"
+         viewport={{ once: true, amount: 0.2 }}
+          variants={textVariantsTyC}
+       className="bg-gray-100 text-gray-900 mt-14  mx-3 xl:mx-5 rounded-3xl">
       <div className="container grid grid-cols-12 mx-auto">
         <div className="flex flex-col justify-center col-span-12 align-middle bg-gray-700 bg-no-repeat bg-cover lg:col-span-6 lg:h-auto rounded-xl" 
         style= {{
@@ -61,7 +82,7 @@ const TYC = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
 
     
     </>
